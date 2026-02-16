@@ -1,7 +1,7 @@
-# Requirements: Gallery Feature — Contractor Website
+# Requirements: Gallery Feature -- Contractor Website
 
 **Defined:** 2026-02-16
-**Core Value:** Visitors see proof of quality work — the gallery builds enough trust that they request a quote.
+**Core Value:** Visitors see proof of quality work -- the gallery builds enough trust that they request a quote.
 
 ## v1 Requirements
 
@@ -53,26 +53,26 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| GALL-01 | | Pending |
-| GALL-02 | | Pending |
-| GALL-03 | | Pending |
-| GALL-04 | | Pending |
-| GALL-05 | | Pending |
-| INTR-01 | | Pending |
-| INTR-02 | | Pending |
-| INTR-03 | | Pending |
-| INTR-04 | | Pending |
-| INTG-01 | | Pending |
-| INTG-02 | | Pending |
-| ACCS-01 | | Pending |
-| ACCS-02 | | Pending |
-| ACCS-03 | | Pending |
+| GALL-01 | Phase 1 | Pending |
+| GALL-02 | Phase 1 | Pending |
+| GALL-03 | Phase 1 | Pending |
+| GALL-04 | Phase 1 | Pending |
+| GALL-05 | Phase 1 | Pending |
+| INTR-01 | Phase 2 | Pending |
+| INTR-02 | Phase 2 | Pending |
+| INTR-03 | Phase 2 | Pending |
+| INTR-04 | Phase 1 | Pending |
+| INTG-01 | Phase 3 | Pending |
+| INTG-02 | Phase 3 | Pending |
+| ACCS-01 | Phase 3 | Pending |
+| ACCS-02 | Phase 3 | Pending |
+| ACCS-03 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 14 total
-- Mapped to phases: 0
-- Unmapped: 14 ⚠️
+- Mapped to phases: 14
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-16*
-*Last updated: 2026-02-16 after initial definition*
+*Last updated: 2026-02-16 after roadmap creation*
