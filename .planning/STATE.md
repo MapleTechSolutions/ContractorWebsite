@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 ## Current Position
 
 Phase: 4 of 6 (Dark Theme Overhaul + Homepage Rebuild)
-Plan: 4 of TBD in current phase
-Status: In progress — 04-04 complete (ServicePillars server component)
-Last activity: 2026-03-04 — Completed 04-04-PLAN.md (ServicePillars photo pillar component)
+Plan: 6 of TBD in current phase
+Status: In progress — 04-06 complete (Testimonials dark theme reskin)
+Last activity: 2026-03-04 — Completed 04-06-PLAN.md (Testimonials color reskin to dark industrial theme)
 
-Progress: [████░.....] ~30% (Phase 1 of 6 complete + Plans 04-01, 04-02, 04-04; 6 plans done total)
+Progress: [████░.....] ~33% (Phase 1 of 6 complete + Plans 04-01, 04-02, 04-03, 04-04, 04-06; 7 plans done total)
 
 ## Performance Metrics
 
@@ -28,7 +28,7 @@ Progress: [████░.....] ~30% (Phase 1 of 6 complete + Plans 04-01, 04-0
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-rebrand-foundation | 3/3 | ~27 min | ~9 min |
-| 04-dark-theme-homepage | 2/TBD | ~13 min | ~6.5 min |
+| 04-dark-theme-homepage | 5/TBD | ~28 min | ~5.6 min |
 | 05-gallery-equipment | 0/TBD | — | — |
 | 06-services-content-polish | 0/TBD | — | — |
 
@@ -69,6 +69,8 @@ Recent decisions affecting current work:
 - CONV-01 (tel: link) was already present from prior work — no regression on Call Now button (D-410a)
 - ServicePillars: new server component, ServicesPreview kept intact for /services page reuse (D-407)
 - ServicePillars data inline — no separate data file for two static pillars (D-408)
+- Testimonials slider logic, data, auto-advance preserved verbatim — Plan 04-06 was color-only (D-409)
+- Testimonials avatar bg kept bg-[#0f1f2d] for depth against bg-white/5 card surface (D-410)
 
 ### Pending Todos
 
@@ -76,11 +78,11 @@ None.
 
 ### Blockers/Concerns
 
-None. ServicePillars component ready. Next: wire ServicePillars into homepage page.tsx (Plan 04-05 or 04-06).
+None. Testimonials dark reskin complete. Next: continue remaining Phase 4 plans (04-05, 04-07 homepage assembly).
 
 ## Session Continuity
 
 Last session: 2026-03-04
-Stopped at: Completed 04-04-PLAN.md — ServicePillars server component
+Stopped at: Completed 04-06-PLAN.md — Testimonials dark theme reskin
 Resume file: None
-Next action: Execute 04-05-PLAN.md
+Next action: Execute 04-05-PLAN.md or 04-07-PLAN.md (homepage assembly)
