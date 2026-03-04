@@ -5,35 +5,35 @@ import { useState, useEffect, useCallback } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "John & Sarah M.",
-    location: "Residential Client",
+    name: "Dave K.",
+    location: "Strathmore Commercial Properties",
     rating: 5,
-    text: "They completed our entire renovation project flawlessly. They handled everything professionally, kept us informed throughout the process, and finished ahead of schedule. Couldn't be happier!",
-    service: "Residential",
+    text: "Big Country handled our full site clearing and rough grading over three phases. A professional crew — showed up when they said they would, zero surprises on the invoice, and the site was ready for our contractor two days early.",
+    service: "Excavation",
   },
   {
     id: 2,
-    name: "Mike Thompson",
-    location: "Homeowner",
+    name: "Rob M.",
+    location: "Prairie Build Ltd.",
     rating: 5,
-    text: "Professional from start to finish. They found issues our previous contractor missed and fixed everything at a fair price. Their attention to detail is impressive.",
-    service: "Renovation",
+    text: "We've used Big Country for snow removal across four of our commercial properties for the past two winters. Our lots are always clear before 6 AM. That reliability is everything when tenants are counting on us.",
+    service: "Snow Removal",
   },
   {
     id: 3,
-    name: "Downtown Restaurant",
-    location: "Business Owner",
+    name: "Carla B.",
+    location: "Drumheller Mall",
     rating: 5,
-    text: "As a business owner, I needed a company that could work around our schedule. They completed the job with zero disruption to our operations.",
-    service: "Commercial",
+    text: "After our previous contractor bailed mid-season we called Big Country. They had equipment on-site the next morning. The work was clean, the team was professional, and they've had our contract ever since.",
+    service: "Snow Removal",
   },
   {
     id: 4,
-    name: "Linda Chen",
-    location: "Homeowner",
+    name: "Tyler J.",
+    location: "Foothills Land Corp",
     rating: 5,
-    text: "When we had an emergency repair needed, they came out the same day. They fixed the problem quickly and followed up to make sure everything was okay.",
-    service: "Repairs",
+    text: "Big Country did the utility trenching and backfill on a tight residential development timeline. They coordinated with Alberta One-Call, kept the site tidy, and I never had to chase them for updates. Exactly what you want on a fast-moving project.",
+    service: "Excavation",
   },
 ];
 
@@ -60,18 +60,18 @@ export default function Testimonials() {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#FCB215]/10 text-[#094026] px-4 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#F5A623]/10 text-[#0f1f2d] px-4 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
             </svg>
             Reviews
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#094026] mb-4 md:mb-5">
-            What Our
-            <span className="text-[#FCB215]"> Clients Say</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0f1f2d] mb-4 md:mb-5">
+            What Commercial
+            <span className="text-[#F5A623]"> Clients Say</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say.
+            Don&apos;t just take our word for it. Here&apos;s what our commercial clients across Big Country, Alberta have to say.
           </p>
         </div>
 
@@ -85,8 +85,8 @@ export default function Testimonials() {
             onMouseLeave={() => setIsPaused(false)}
           >
             {/* Quote decoration */}
-            <div className="absolute -top-4 md:-top-6 left-6 md:left-8 w-10 h-10 md:w-12 md:h-12 bg-[#FCB215] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg shadow-[#FCB215]/25">
-              <svg className="w-5 h-5 md:w-6 md:h-6 text-[#094026]" fill="currentColor" viewBox="0 0 24 24">
+            <div className="absolute -top-4 md:-top-6 left-6 md:left-8 w-10 h-10 md:w-12 md:h-12 bg-[#F5A623] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg shadow-[#F5A623]/25">
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-[#0f1f2d]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
               </svg>
             </div>
@@ -96,7 +96,7 @@ export default function Testimonials() {
               {/* Stars */}
               <div className="flex gap-1 mb-4 md:mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 md:w-6 md:h-6 text-[#FCB215]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-5 h-5 md:w-6 md:h-6 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -121,13 +121,13 @@ export default function Testimonials() {
               {/* Author info */}
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#094026] flex items-center justify-center">
-                    <svg className="w-6 h-6 md:w-7 md:h-7 text-[#FCB215]" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#0f1f2d] flex items-center justify-center">
+                    <svg className="w-6 h-6 md:w-7 md:h-7 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-[#094026] text-base md:text-lg">
+                    <div className="font-semibold text-[#0f1f2d] text-base md:text-lg">
                       {testimonials[activeIndex].name}
                     </div>
                     <div className="text-gray-500 text-sm md:text-base">
@@ -135,7 +135,7 @@ export default function Testimonials() {
                     </div>
                   </div>
                 </div>
-                <div className="px-3 py-1.5 md:px-4 md:py-2 bg-[#094026] text-[#FCB215] rounded-full text-xs md:text-sm font-semibold">
+                <div className="px-3 py-1.5 md:px-4 md:py-2 bg-[#0f1f2d] text-[#F5A623] rounded-full text-xs md:text-sm font-semibold">
                   {testimonials[activeIndex].service}
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm active:bg-gray-100 touch-manipulation"
                 aria-label="Previous testimonial"
               >
-                <svg className="w-5 h-5 text-[#094026]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#0f1f2d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
@@ -159,7 +159,7 @@ export default function Testimonials() {
                     onClick={() => setActiveIndex(index)}
                     className={`transition-all duration-300 rounded-full touch-manipulation ${
                       index === activeIndex
-                        ? "w-8 h-3 bg-[#FCB215]"
+                        ? "w-8 h-3 bg-[#F5A623]"
                         : "w-3 h-3 bg-gray-300"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
@@ -171,7 +171,7 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm active:bg-gray-100 touch-manipulation"
                 aria-label="Next testimonial"
               >
-                <svg className="w-5 h-5 text-[#094026]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#0f1f2d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -185,7 +185,7 @@ export default function Testimonials() {
                   onClick={() => setActiveIndex(index)}
                   className={`transition-all duration-300 rounded-full ${
                     index === activeIndex
-                      ? "w-8 h-3 bg-[#FCB215]"
+                      ? "w-8 h-3 bg-[#F5A623]"
                       : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -201,15 +201,15 @@ export default function Testimonials() {
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-[#FCB215]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
-              <span className="font-bold text-[#094026] text-base md:text-lg">5.0</span>
+              <span className="font-bold text-[#0f1f2d] text-base md:text-lg">5.0</span>
             </div>
             <div className="h-5 md:h-6 w-px bg-gray-300" />
-            <span className="text-gray-600 text-sm md:text-base">Based on <span className="font-semibold text-[#094026]">100+</span> reviews</span>
+            <span className="text-gray-600 text-sm md:text-base">Based on <span className="font-semibold text-[#0f1f2d]">100+</span> reviews</span>
           </div>
         </div>
       </div>
