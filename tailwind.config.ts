@@ -9,25 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
+        brand: {
+          dark: '#0f1f2d',      // near-black steel — hero BG, dark sections
+          mid: '#2d4f64',       // steel blue from logo — mid sections
+          light: '#3d6882',     // lighter steel — hover states, subtle BG
+          accent: '#F5A623',    // construction amber — CTAs, highlights
+          surface: '#f7f4ef',   // warm off-white — light section backgrounds
         },
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'glow': '0 0 40px -10px rgba(251, 191, 36, 0.5)',
-        'glow-lg': '0 0 60px -15px rgba(251, 191, 36, 0.6)',
+        'glow': '0 0 40px -10px rgba(245, 166, 35, 0.5)',
+        'glow-lg': '0 0 60px -15px rgba(245, 166, 35, 0.6)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

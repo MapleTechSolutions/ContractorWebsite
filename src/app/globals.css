@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Sergeant Painters Theme - Dark Green & Gold */
-  --primary-dark: #094026;
-  --primary-mid: #0a5530;
-  --accent-primary: #FCB215;
-  --accent-highlight: #FCB215;
+  /* Big Country Landscaping & Maintenance Ltd — Steel Blue & Amber */
+  --primary-dark: #0f1f2d;
+  --primary-mid: #2d4f64;
+  --accent-primary: #F5A623;
+  --accent-highlight: #F5A623;
   --text-light: #ffffff;
   --text-muted: #a0a0a0;
   --bg-light: #f8f9fa;
@@ -36,8 +34,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  color: #094026;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  color: #0f1f2d;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,6 +43,7 @@ body {
   overflow-x: hidden;
   /* Improve text rendering on mobile */
   text-rendering: optimizeSpeed;
+  -webkit-tap-highlight-color: rgba(245, 166, 35, 0.2);
 }
 
 /* Prevent zoom on input focus (iOS) */
@@ -54,45 +53,40 @@ body {
   }
 }
 
-/* Touch highlight color */
-* {
-  -webkit-tap-highlight-color: rgba(252, 178, 21, 0.2);
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #094026;
+  background: #0f1f2d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FCB215;
+  background: #F5A623;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e5a013;
+  background: #d4921f;
 }
 
 @layer components {
   /* Mobile-first button styles with proper touch targets (min 44px) */
   .btn-primary {
-    @apply bg-[#FCB215] hover:bg-[#e5a013] active:bg-[#d4940f] text-[#094026] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg shadow-[#FCB215]/25 hover:shadow-xl hover:shadow-[#FCB215]/30 min-h-[48px] touch-manipulation;
+    @apply bg-[#F5A623] hover:bg-[#d4921f] active:bg-[#d4921f] text-[#0f1f2d] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg shadow-[#F5A623]/25 hover:shadow-xl hover:shadow-[#F5A623]/30 min-h-[48px] touch-manipulation;
   }
 
   .btn-secondary {
-    @apply bg-[#094026] hover:bg-[#0a5530] active:bg-[#063d22] text-white font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation;
+    @apply bg-[#0f1f2d] hover:bg-[#2d4f64] active:bg-[#0f1f2d] text-white font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation;
   }
 
   .btn-outline {
-    @apply border-2 border-[#FCB215] text-[#FCB215] hover:bg-[#FCB215] hover:text-[#094026] active:bg-[#e5a013] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
+    @apply border-2 border-[#F5A623] text-[#F5A623] hover:bg-[#F5A623] hover:text-[#0f1f2d] active:bg-[#d4921f] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
   }
 
   .btn-outline-white {
-    @apply border-2 border-white text-white hover:bg-white hover:text-[#094026] active:bg-gray-100 font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
+    @apply border-2 border-white text-white hover:bg-white hover:text-[#0f1f2d] active:bg-gray-100 font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
   }
 
   /* Responsive section padding - reduced on mobile for more content visibility */
@@ -105,7 +99,7 @@ body {
   }
 
   .section-dark {
-    @apply bg-[#094026] text-white;
+    @apply bg-[#0f1f2d] text-white;
   }
 
   .section-light {
@@ -113,7 +107,7 @@ body {
   }
 
   .accent-text {
-    @apply text-[#FCB215];
+    @apply text-[#F5A623];
   }
 
   /* Reduced hover effects on mobile for better performance */
@@ -128,12 +122,12 @@ body {
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#FCB215] to-[#094026] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#F5A623] to-[#0f1f2d] bg-clip-text text-transparent;
   }
 
   /* Mobile-friendly form inputs */
   .form-input {
-    @apply w-full px-4 py-3.5 bg-[#f8f9fa] border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FCB215]/20 focus:border-[#FCB215] outline-none transition-colors text-base min-h-[48px];
+    @apply w-full px-4 py-3.5 bg-[#f8f9fa] border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#F5A623]/20 focus:border-[#F5A623] outline-none transition-colors text-base min-h-[48px];
   }
 
   /* Touch-friendly link areas */
@@ -150,8 +144,8 @@ body {
 
 /* Selection color */
 ::selection {
-  background: #FCB215;
-  color: #094026;
+  background: #F5A623;
+  color: #0f1f2d;
 }
 
 /* Stat counter animation placeholder */
@@ -198,7 +192,7 @@ body {
 
 /* Focus visible for accessibility */
 :focus-visible {
-  outline: 2px solid #FCB215;
+  outline: 2px solid #F5A623;
   outline-offset: 2px;
 }
 
