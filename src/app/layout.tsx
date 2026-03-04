@@ -4,8 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
-// TODO: Plan 01-03 — SeasonalBar will be created and imported here
-// import SeasonalBar from '@/components/SeasonalBar'
+import SeasonalBar from '@/components/SeasonalBar'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -85,7 +84,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://bigcountrylandscaping.ca" />
       </head>
       <body className="antialiased">
-        {/* TODO: Plan 01-03 — <SeasonalBar /> goes here, above Header */}
+        <SeasonalBar />
         <Header />
         <main>{children}</main>
         <Footer />
