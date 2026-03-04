@@ -63,6 +63,10 @@ Recent decisions affecting current work:
 - Header isScrolled retained for opacity-only transition (80% → 95%) + backdrop-blur — never changes color scheme on scroll (D-404)
 - Mobile nav links use font-black (900) — industrial weight, matches brand direction (D-405)
 - Photo staging: hero-excavator.jpg = big country.jpg; semantic image-to-section correctness deferred to Plan 07 human checkpoint (D-406)
+- Hero photo: next/image fill + sizes="100vw" — correct sizing hint for full-viewport-width LCP image (D-407a)
+- Hero overlay: bg-[#0f1f2d]/70 + gradient-to-t from-[#0f1f2d]/40 — flat overlay + gradient for consistent legibility top-to-bottom (D-408a)
+- Trust pill badges use bg-white/10 border-white/10 rounded-lg — elevated above bare text, don't compete with primary CTA (D-409a)
+- CONV-01 (tel: link) was already present from prior work — no regression on Call Now button (D-410a)
 - ServicePillars: new server component, ServicesPreview kept intact for /services page reuse (D-407)
 - ServicePillars data inline — no separate data file for two static pillars (D-408)
 
