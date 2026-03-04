@@ -1,78 +1,163 @@
-# Requirements: Gallery Feature -- Contractor Website
+# Requirements: Big Country Landscaping & Maintenance Ltd — v2.0 Rebrand
 
-**Defined:** 2026-02-16
-**Core Value:** Visitors see proof of quality work -- the gallery builds enough trust that they request a quote.
+**Defined:** 2026-03-03
+**Core Value:** A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
 
 ## v1 Requirements
 
-### Gallery Page
+### Branding & Visual Identity
 
-- [ ] **GALL-01**: Gallery page at `/gallery` with responsive grid (1 col mobile, 2 col tablet, 3 col desktop)
-- [ ] **GALL-02**: Category filter buttons with animated transitions between filters
-- [ ] **GALL-03**: Page hero section with title and description matching site theme
-- [ ] **GALL-04**: Placeholder card design (colored backgrounds with category icons, swappable for real images later)
-- [ ] **GALL-05**: Empty state when no projects match selected filter
+- [ ] **BRAND-01**: New dark industrial color palette defined in `tailwind.config.ts` (replaces generic dark green #094026 + gold #FCB215)
+- [ ] **BRAND-02**: Logo (PNG/SVG) moved to `/public/` and integrated into Header replacing placeholder
+- [ ] **BRAND-03**: Logo integrated into Footer
+- [ ] **BRAND-04**: Montserrat font loaded via `next/font/google` in layout.tsx (removes render-blocking `@import` from globals.css)
+- [ ] **BRAND-05**: All hardcoded old hex values (#094026, #0a5530, #FCB215, etc.) removed from every component file
 
-### Interactivity
+### Content Replacement
 
-- [ ] **INTR-01**: Lightbox modal to view project details enlarged
-- [ ] **INTR-02**: Keyboard navigation in lightbox (ESC close, arrow keys prev/next)
-- [ ] **INTR-03**: Before/after comparison view for projects that have both images
-- [ ] **INTR-04**: Framer Motion animations (fade, scale, layout transitions on filter and grid)
+- [ ] **CONT-01**: Company name "Big Country Landscaping & Maintenance Ltd" throughout all pages and site metadata
+- [ ] **CONT-02**: Placeholder contact info — `(587) 555-1234` and `info@bigcountrylandscaping.ca` in all instances
+- [ ] **CONT-03**: Hero headline and CTA rewritten for excavation + snow removal commercial identity
+- [ ] **CONT-04**: Services rewritten — Excavation (site clearing, grading, trenching, demolition) and Snow Removal (commercial lot clearing, salting, hauling, 24/7 response)
+- [ ] **CONT-05**: Trust badges updated — WCB Alberta, fully insured, Alberta One-Call compliance
+- [ ] **CONT-06**: Service area statement ("Serving Big Country region, Alberta") in hero and footer
+- [ ] **CONT-07**: Testimonials updated with commercial-voice quotes (property managers, commercial clients)
+- [ ] **CONT-08**: About page updated with Big Country Landscaping identity background and fleet capacity
+- [ ] **CONT-09**: Site metadata updated — title, OG description, themeColor, canonical URL for Big Country
 
-### Integration
+### Forms
 
-- [ ] **INTG-01**: Gallery link added to Header navigation (desktop + mobile menu)
-- [ ] **INTG-02**: Gallery preview section on homepage showing featured projects with link to full gallery
+- [ ] **FORM-01**: Hero quick-quote form connected to Formspree (currently has no submit handler — all leads silently lost)
+- [ ] **FORM-02**: Contact page form connected to Formspree (currently uses fake setTimeout — all leads silently lost)
 
-### Accessibility & Mobile
+### Seasonal Bar
 
-- [ ] **ACCS-01**: ARIA labels, focus management, keyboard support throughout gallery and lightbox
-- [ ] **ACCS-02**: Mobile-optimized touch interactions (48px targets, touch-manipulation)
-- [ ] **ACCS-03**: Reduced animations on mobile for performance (prefers-reduced-motion support)
+- [ ] **SEAS-01**: Seasonal announcement bar component rendered above the Header in layout.tsx (dismissable per session)
+- [ ] **SEAS-02**: Seasonal message stored in `src/data/seasonal.ts` — not hardcoded, easy to update each season without touching components
+
+### Gallery
+
+- [ ] **GALL-01**: Gallery page at `/gallery` with responsive grid — 1 column mobile, 2 column tablet, 3 column desktop
+- [ ] **GALL-02**: Category filter buttons — All / Excavation / Snow Removal / Site Prep — with animated transitions
+- [ ] **GALL-03**: Gallery page hero section with title and description matching site theme
+- [ ] **GALL-04**: Gallery data model defines `alt` as a required field (accessibility + local SEO)
+- [ ] **GALL-05**: Placeholder project cards with correct aspect ratio ready to swap in real client photos
+- [ ] **GALL-06**: Empty state message displayed when no projects match the selected filter
+
+### Lightbox & Animations
+
+- [ ] **LBOX-01**: Lightbox modal opens on project card click using `yet-another-react-lightbox`
+- [ ] **LBOX-02**: Swipe navigation in lightbox (swipe left/right for prev/next) — required for phone demo
+- [ ] **LBOX-03**: Keyboard navigation — ESC to close, left/right arrow keys for prev/next
+- [ ] **LBOX-04**: Framer Motion animations — gallery grid reflow on filter change + project card entrance animations
+
+### Equipment Roster
+
+- [ ] **ROST-01**: Equipment Roster section on homepage with cards for key machines
+- [ ] **ROST-02**: Equipment data model — machine name, type, photo slot, description, service category (strongly typed TypeScript)
+- [ ] **ROST-03**: Placeholder equipment cards with ready photo slots for client photos
+
+### Site Integration
+
+- [ ] **INTG-01**: Gallery link in Header navigation — both desktop nav and mobile menu
+- [ ] **INTG-02**: Gallery preview teaser section on homepage ("See Our Work") with link to full gallery
+- [ ] **INTG-03**: Equipment Roster section wired into homepage layout
+
+### Mobile & Performance
+
+- [ ] **MOBI-01**: All interactive elements minimum 48px touch target (filter buttons, nav items, CTA buttons, lightbox controls)
+- [ ] **MOBI-02**: Phone number rendered as `<a href="tel:+15875551234">` in header, hero, footer, and MobileStickyCTA
+- [ ] **MOBI-03**: `next/image` used for all photos — hero background, gallery cards, and equipment roster cards
+- [ ] **MOBI-04**: `prefers-reduced-motion` media query respected throughout (gallery animations, seasonal bar)
+- [ ] **MOBI-05**: ARIA labels and keyboard focus management on gallery filter buttons and lightbox modal
 
 ## v2 Requirements
 
+### Enhanced Content (Post-Launch)
+
+- **V2-CONT-01**: Real client photos replace all placeholder images in gallery
+- **V2-CONT-02**: Real machine photos replace equipment roster placeholders
+- **V2-CONT-03**: Real testimonials from named commercial clients replace placeholder quotes
+- **V2-CONT-04**: Real phone number and email replace placeholder contact info
+
 ### Enhanced Gallery
 
-- **EGAL-01**: Real project images replacing placeholders
-- **EGAL-02**: Image optimization with next/image
-- **EGAL-03**: Project detail pages with full description, multiple images, timeline
-- **EGAL-04**: Search/text filter within gallery
+- **V2-GALL-01**: Before/after comparison view for select projects
+- **V2-GALL-02**: Project captions with location, scope, and outcome detail
+- **V2-GALL-03**: Individual project detail pages with full image sets
+
+### Enhanced Lead Gen
+
+- **V2-FORM-01**: Form submission email notifications with lead details
+- **V2-FORM-02**: SMS notification on new quote request (urgent for snow removal)
+
+### Performance
+
+- **V2-PERF-01**: All gallery images converted to WebP with blur-up placeholders generated at build time
+- **V2-PERF-02**: Lighthouse mobile score 90+ validated
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Image upload / CMS | Static data for now, no backend needed |
-| Video content | Photos only for v1 |
-| Comments / social sharing | Showcase only, not social |
-| Project detail sub-pages | Lightbox is sufficient for v1 |
+| Image upload / CMS | Static site, photos added to codebase directly — CMS is v3+ |
+| Video backgrounds or hero video | Adds complexity, mobile data cost, deferred to v3 |
+| Online booking / scheduling system | Lead gen only — phone + form; no backend |
+| Before/after comparison slider | v2 feature once real photos are available |
+| Google Maps embed | Deferred — contact page with text service area is sufficient for v2.0 |
+| Blog or news section | No content strategy yet; thin content is worse than none |
+| Social media feed embeds | Signals inactivity if client doesn't post regularly; link-to-profile only |
+| Popup / chat widget | Off-brand for trade contractor; sticky header and CTA bar are correct channels |
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| GALL-01 | Phase 1 | Pending |
-| GALL-02 | Phase 1 | Pending |
-| GALL-03 | Phase 1 | Pending |
-| GALL-04 | Phase 1 | Pending |
-| GALL-05 | Phase 1 | Pending |
-| INTR-01 | Phase 2 | Pending |
-| INTR-02 | Phase 2 | Pending |
-| INTR-03 | Phase 2 | Pending |
-| INTR-04 | Phase 1 | Pending |
-| INTG-01 | Phase 3 | Pending |
-| INTG-02 | Phase 3 | Pending |
-| ACCS-01 | Phase 3 | Pending |
-| ACCS-02 | Phase 3 | Pending |
-| ACCS-03 | Phase 3 | Pending |
+| BRAND-01 | Phase 1 | Pending |
+| BRAND-02 | Phase 1 | Pending |
+| BRAND-03 | Phase 1 | Pending |
+| BRAND-04 | Phase 1 | Pending |
+| BRAND-05 | Phase 1 | Pending |
+| CONT-01 | Phase 1 | Pending |
+| CONT-02 | Phase 1 | Pending |
+| CONT-03 | Phase 1 | Pending |
+| CONT-04 | Phase 1 | Pending |
+| CONT-05 | Phase 1 | Pending |
+| CONT-06 | Phase 1 | Pending |
+| CONT-07 | Phase 1 | Pending |
+| CONT-08 | Phase 1 | Pending |
+| CONT-09 | Phase 1 | Pending |
+| FORM-01 | Phase 1 | Pending |
+| FORM-02 | Phase 1 | Pending |
+| SEAS-01 | Phase 1 | Pending |
+| SEAS-02 | Phase 1 | Pending |
+| GALL-01 | Phase 2 | Pending |
+| GALL-02 | Phase 2 | Pending |
+| GALL-03 | Phase 2 | Pending |
+| GALL-04 | Phase 2 | Pending |
+| GALL-05 | Phase 2 | Pending |
+| GALL-06 | Phase 2 | Pending |
+| LBOX-01 | Phase 2 | Pending |
+| LBOX-02 | Phase 2 | Pending |
+| LBOX-03 | Phase 2 | Pending |
+| LBOX-04 | Phase 2 | Pending |
+| ROST-01 | Phase 3 | Pending |
+| ROST-02 | Phase 3 | Pending |
+| ROST-03 | Phase 3 | Pending |
+| INTG-01 | Phase 2 | Pending |
+| INTG-02 | Phase 2 | Pending |
+| INTG-03 | Phase 3 | Pending |
+| MOBI-01 | Phase 3 | Pending |
+| MOBI-02 | Phase 1 | Pending |
+| MOBI-03 | Phase 2 | Pending |
+| MOBI-04 | Phase 3 | Pending |
+| MOBI-05 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 14 total
-- Mapped to phases: 14
-- Unmapped: 0
+- v1 requirements: 37 total
+- Mapped to phases: 37
+- Unmapped: 0 ✓
 
 ---
-*Requirements defined: 2026-02-16*
-*Last updated: 2026-02-16 after roadmap creation*
+*Requirements defined: 2026-03-03*
+*Last updated: 2026-03-03 after v2.0 milestone start*
