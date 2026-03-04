@@ -81,7 +81,7 @@
 
 | Phase | Goal | Plans | Requirements | Status |
 |-------|------|-------|--------------|--------|
-| 1 - Rebrand Foundation | Site fully rebranded, forms live, seasonal bar active | 3 of 3 | BRAND-01..05, CONT-01..09, FORM-01..02, SEAS-01..02, MOBI-02 | Pending |
+| 1 - Rebrand Foundation | Site fully rebranded, forms live, seasonal bar active | 3 of 3 | BRAND-01..05, CONT-01..09, FORM-01..02, SEAS-01..02, MOBI-02 | Complete ✓ |
 | 2 - Gallery Feature | Filterable gallery with lightbox, wired into nav and homepage | 2 of 2 | GALL-01..06, LBOX-01..04, INTG-01..02, MOBI-03 | Pending |
 | 3 - Equipment Roster + Polish | Roster live, mobile hardened, accessibility complete | 2 of 2 | ROST-01..03, INTG-03, MOBI-01, MOBI-04..05 | Pending |
 
