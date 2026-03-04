@@ -10,24 +10,24 @@ See: .planning/PROJECT.md (updated 2026-03-03)
 ## Current Position
 
 Phase: 1 of 3 (Rebrand Foundation)
-Plan: 1 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-04 — Completed 01-01-PLAN.md (Color, Font, Logo, Layout)
+Plan: 3 of 3 in current phase
+Status: Phase 1 complete (all 3 plans executed)
+Last activity: 2026-03-04 — Completed 01-03-PLAN.md (Forms and Seasonal Bar)
 
-Progress: [█.........] ~11% (1/9 estimated plans)
+Progress: [███.......] ~33% (3/9 estimated plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 11 min
-- Total execution time: 0.18 hours
+- Total plans completed: 3
+- Average duration: ~9 min
+- Total execution time: ~0.45 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-rebrand-foundation | 1/3 | 11 min | 11 min |
+| 01-rebrand-foundation | 3/3 | ~27 min | ~9 min |
 
 *Updated after each plan completion*
 
@@ -45,7 +45,9 @@ Recent decisions affecting current work:
 - Color tokens: Define in tailwind.config.ts extend.colors NOT @theme{} — this is Tailwind v3 (DONE in 01-01)
 - Brand colors confirmed: brand-dark #0f1f2d, brand-mid #2d4f64, brand-light #3d6882, brand-accent #F5A623, brand-surface #f7f4ef
 - abc-roofing/ is a nested git repository — commit source code changes in inner repo, planning docs in outer repo
-- SeasonalBar import is a commented-out TODO slot in layout.tsx — Plan 01-03 creates the component
+- SeasonalBar: sticky top-0 z-[60], scrolls away naturally, fixed Header z-50 persists below it (D-301)
+- Hero formStatus shared between desktop and mobile forms — both never show simultaneously (D-302)
+- Contact handleSubmit preserved verbatim — intentional fake setTimeout, no backend (D-303)
 
 ### Pending Todos
 
@@ -53,11 +55,10 @@ None.
 
 ### Blockers/Concerns
 
-- Formspree endpoint URL needed — create free account at formspree.io before Phase 1 Plan 03 (if forms connect to backend)
-- Note: Key decisions say Forms are UI state only, so Formspree blocker may be resolved
+None. Phase 1 complete. Phase 2 (Gallery and Portfolio) ready to begin.
 
 ## Session Continuity
 
-Last session: 2026-03-04T04:38:41Z
-Stopped at: Completed 01-01-PLAN.md — brand foundation established
+Last session: 2026-03-04T04:46:32Z
+Stopped at: Completed 01-03-PLAN.md — forms and seasonal bar complete
 Resume file: None
