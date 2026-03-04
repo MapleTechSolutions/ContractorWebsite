@@ -1,69 +1,90 @@
-# Gallery Feature — Contractor Website
+# Big Country Landscaping & Maintenance Ltd — Website
 
 ## What This Is
 
-A gallery/portfolio page for an existing contractor website that showcases past work to build trust with potential clients. Visitors can browse completed projects by category, view them in a lightbox, and some projects feature before/after comparison. Built as a new page within an existing Next.js 14 App Router site with a dark green + gold theme.
+A complete, branded website for Big Country Landscaping & Maintenance Ltd, a contractor specializing in excavation and commercial snow removal. Built on an existing Next.js 14 template, this milestone transforms the generic demo into a real client-ready site with a bold industrial look, photo-heavy design, and mobile-first presentation optimized for showing the client on a phone.
 
 ## Core Value
 
-Visitors see proof of quality work — the gallery builds enough trust that they request a quote.
+A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
+
+## Current Milestone: v2.0 Big Country Rebrand
+
+**Goal:** Transform the generic contractor template into a fully branded site for Big Country Landscaping & Maintenance Ltd — correct branding, services, content, design theme, and portfolio gallery with real client photos.
+
+**Target features:**
+- Complete rebrand: logo, company name, colors, and all placeholder content replaced
+- Dark industrial/bold theme derived from the logo (replacing current dark green + gold)
+- Two core service sections: Excavation and Snow Removal
+- Portfolio gallery with category filters (Excavation, Snow Removal, Site Prep)
+- Equipment Roster section showcasing key machines
+- Seasonal CTA bar (e.g., "Now Booking Spring Excavation")
+- Hero with inline quote form and strong action-shot background
+- Sticky header with phone number and Get a Quote CTA always visible
+- Mobile-first experience (demo on phone for client)
 
 ## Requirements
 
 ### Validated
 
-- ✓ Next.js 14 App Router site with Tailwind CSS 3 — existing
-- ✓ Dark green (#094026) + gold (#FCB215) color scheme — existing
-- ✓ Responsive mobile-first design — existing
-- ✓ Header with nav links + Footer — existing
+- ✓ Next.js 14 App Router site with Tailwind CSS 3 — existing foundation
+- ✓ Responsive mobile-first design patterns — existing
+- ✓ Header with nav + Footer + MobileStickyCTA — existing
 - ✓ Custom utility classes (section-padding, container-custom, btn-*) — existing
+- ✓ Contact form, Services, About, Reviews pages — existing structure
 
 ### Active
 
-- [ ] Gallery page at /gallery with responsive grid (1/2/3 columns)
-- [ ] Category filter buttons to filter projects (animated transitions)
-- [ ] Lightbox modal with keyboard navigation (ESC, arrow keys)
-- [ ] Before/after comparison for select projects
-- [ ] Framer Motion animations (fade, scale, layout transitions)
-- [ ] Placeholder card design (colored backgrounds with icons, swappable for real images later)
-- [ ] Navigation link added to Header for Gallery page
-- [ ] Mobile-optimized touch interactions matching existing site patterns
-- [ ] Accessibility (ARIA labels, focus management, keyboard support)
+- [ ] All placeholder content replaced with Big Country Landscaping branding
+- [ ] Logo (PNG/SVG already created) integrated into Header and Footer
+- [ ] New dark industrial color theme derived from logo colors
+- [ ] Hero section with strong excavation/snow imagery and inline quote form
+- [ ] Seasonal announcement bar at top (togglable message)
+- [ ] Sticky header — phone number + "Get a Quote" always visible
+- [ ] Services page: Excavation (site clearing, grading, trenching, demolition) + Snow Removal (commercial lots, salting, hauling)
+- [ ] Equipment Roster section showcasing their key machines with photos
+- [ ] Portfolio gallery — filterable by Excavation / Snow Removal / Site Prep
+- [ ] Lightbox to view project photos enlarged with keyboard navigation
+- [ ] Gallery integrated into nav and homepage preview
+- [ ] Real client photos wired in where provided (with easy swap for more later)
+- [ ] Mobile-optimized: 48px touch targets, smooth scroll, no interaction friction
 
 ### Out of Scope
 
-- Real project images — placeholders now, images added later
-- Image upload/CMS functionality — static data for now
-- Video content — photos only
-- Comments or social sharing — this is a showcase, not social
+- Image upload / CMS — static data, photos added to codebase directly
+- Video content — photos only for v2.0
+- Online booking / payment — lead gen only (phone + quote form)
+- Before/after comparison — v3 if client wants it
+- Comments or reviews integration — static testimonials only
 
 ## Context
 
-- Existing site is a generic contractor template deployed to Vercel
-- Uses Tailwind CSS v3 (config-based, NOT v4 CSS-based)
-- Currently no framer-motion or lucide-react installed — need to add
-- All current icons are inline SVGs — reference file uses lucide-react
-- Components use flat directory structure (src/components/)
-- Reference implementation provided in GALLERY_FEATURE_INSTRUCTIONS.md
-- Site designed for 70%+ mobile traffic — gallery must be touch-friendly
-- Current nav: Home, Services, About, Reviews, Contact — Gallery needs to be added
+- Existing site: Generic contractor template at `/abc-roofing/`
+- Tech stack: Next.js 14 App Router, TypeScript, Tailwind CSS v3
+- Logo files already exist in project root (PNG + SVG)
+- Client business: Excavation + Commercial Snow Removal in Alberta (Big Country = rural/agricultural area)
+- Priority viewpoint: Mobile phone (for client demo) — must also look excellent on desktop
+- Photography: Client will provide real equipment and job site photos — slots must be ready
+- Placeholder contact: (587) 555-1234 | info@bigcountrylandscaping.ca
+- framer-motion and lucide-react not yet installed — required for gallery
 
 ## Constraints
 
-- **Tech stack**: Must use existing Next.js 14 + Tailwind CSS 3 setup — no framework changes
-- **Theme**: Must match existing dark green + gold color scheme exactly
-- **Performance**: Mobile-first, reduced animations for mobile, 48px touch targets
-- **Dependencies**: framer-motion and lucide-react need to be installed
-- **Compatibility**: Must work with existing Header, Footer, layout patterns
+- **Tech stack**: Next.js 14 + Tailwind CSS v3 — no framework changes
+- **Logo**: Use the existing Excavator and Snow Plow in Motion logo files
+- **Mobile-first**: Every interaction must be smooth on a 390px phone screen
+- **Performance**: Real images must use next/image for optimization
+- **No backend**: Static site, no database, no auth — lead gen via form only
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Use framer-motion for animations | Reference file uses it, enables smooth filter/lightbox transitions | — Pending |
-| Use lucide-react for icons | Reference file uses it, cleaner than inline SVGs | — Pending |
-| Placeholder cards instead of real images | No images available yet, colored cards with icons as interim | — Pending |
-| Before/after as optional per-project | Not all projects need before/after, data model supports both | — Pending |
+| Transform existing template vs build from scratch | Foundation is solid, faster to rebrand than rebuild | — Pending |
+| Dark industrial theme vs original dark green + gold | Big Country brand is about heavy iron, not residential landscaping | — Pending |
+| Static photos in codebase vs CMS | v2.0 scope, client can add photos directly; CMS is v3+ | — Pending |
+| framer-motion for gallery animations | Smooth filter transitions and lightbox are worth the dependency | — Pending |
+| Equipment Roster as dedicated section | Excavation clients want to know what equipment is available | — Pending |
 
 ---
-*Last updated: 2026-02-16 after initialization*
+*Last updated: 2026-03-03 after v2.0 milestone start*
