@@ -25,6 +25,17 @@
 
 **Requirements:** VSRL-01, VSRL-02, VSRL-03, VSRL-04, VSRL-05, NAV-01, NAV-02, HOME-01, HOME-02, HOME-03, HOME-06, HOME-07, CONV-01, CONV-02, CONV-03, CONV-04, CONV-05, CONT-03
 
+**Plans:** 7 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Global dark foundation (globals.css body flip, layout.tsx colorScheme)
+- [ ] 04-02-PLAN.md — Header always-dark rebuild + photo staging to public/images/
+- [ ] 04-03-PLAN.md — Hero photo background + trust badge pill upgrade
+- [ ] 04-04-PLAN.md — ServicePillars.tsx new component (photo pillar cards)
+- [ ] 04-05-PLAN.md — WhyBigCountry.tsx + CTABanner.tsx new components
+- [ ] 04-06-PLAN.md — Testimonials.tsx dark reskin
+- [ ] 04-07-PLAN.md — page.tsx wiring + MobileStickyCTA dark colors + human verify
+
 ### Success Criteria
 
 - [ ] Opening the site on any page shows a dark near-black background as the dominant surface — no white or light-grey content areas remain as the primary background on any page
@@ -75,7 +86,7 @@
 
 | Phase | Goal | Plans | Requirements | Status |
 |-------|------|-------|--------------|--------|
-| 4 - Dark Theme Overhaul + Homepage Rebuild | Dark site, rebuilt hero, service pillars, nav, trust signals, CTA banner | TBD | VSRL-01..05, NAV-01..02, HOME-01..03, HOME-06..07, CONV-01..05, CONT-03 | Pending |
+| 4 - Dark Theme Overhaul + Homepage Rebuild | Dark site, rebuilt hero, service pillars, nav, trust signals, CTA banner | 7 plans | VSRL-01..05, NAV-01..02, HOME-01..03, HOME-06..07, CONV-01..05, CONT-03 | Planned |
 | 5 - Gallery + Equipment Roster | Gallery page with filters + lightbox, equipment roster, homepage preview, nav link | TBD | NAV-03, HOME-04..05, GALL-01..05, ROST-01..03 | Pending |
 | 6 - Services Deep Dive + Content + Polish | Services page rebuilt, about updated, full mobile + accessibility audit | TBD | SERV-01..03, CONT-01..02, MOBI-01..05 | Pending |
 
