@@ -10,25 +10,25 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 ## Current Position
 
 Phase: 4 of 6 (Dark Theme Overhaul + Homepage Rebuild)
-Plan: 0 of TBD in current phase
-Status: Phase 1 verified ✓ — v3.0 roadmap created — Phase 4 ready to plan
-Last activity: 2026-03-04 — v3.0 milestone started; ROADMAP.md and STATE.md written for Phases 4–6
+Plan: 1 of TBD in current phase
+Status: In progress — 04-01 complete (dark body bg + colorScheme)
+Last activity: 2026-03-04 — Completed 04-01-PLAN.md (global dark theme foundation)
 
-Progress: [███.......] ~17% (Phase 1 of 6 complete; 3 plans done total)
+Progress: [████......] ~22% (Phase 1 of 6 complete + Plan 04-01; 4 plans done total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~9 min
-- Total execution time: ~0.45 hours
+- Total plans completed: 4
+- Average duration: ~8 min
+- Total execution time: ~0.53 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-rebrand-foundation | 3/3 | ~27 min | ~9 min |
-| 04-dark-theme-homepage | 0/TBD | — | — |
+| 04-dark-theme-homepage | 1/TBD | ~5 min | ~5 min |
 | 05-gallery-equipment | 0/TBD | — | — |
 | 06-services-content-polish | 0/TBD | — | — |
 
@@ -57,6 +57,10 @@ Recent decisions affecting current work:
 - Competitor reference for dark aesthetic: Blackrock Excavating
 - Client photos on hand: Kobelco excavator on job site, mini-ex with worker, Deere track loader doing night snow removal
 
+- body background set to raw CSS `background: #0f1f2d` (not Tailwind class) — fires at CSS parse time, eliminates white flash before hydration (D-401)
+- sticky-cta-mobile uses `border-white/10` for subtle separator on dark bg (D-402)
+- Dark canvas is now default — Phase 4 component changes build on dark, not override light (D-403)
+
 ### Pending Todos
 
 None.
@@ -68,6 +72,6 @@ None. v3.0 roadmap established. Phase 4 (Dark Theme Overhaul + Homepage Rebuild)
 ## Session Continuity
 
 Last session: 2026-03-04
-Stopped at: v3.0 roadmap created — Phases 4, 5, 6 defined with success criteria and requirement mappings
+Stopped at: Completed 04-01-PLAN.md — global dark theme foundation (body bg + colorScheme)
 Resume file: None
-Next action: Run /gsd:plan-phase 4
+Next action: Execute 04-02-PLAN.md
