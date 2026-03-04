@@ -3,21 +3,21 @@ import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Customer Reviews - 5-Star Rated Contractor",
-  description: "Read what our satisfied customers have to say. 5-star rated with hundreds of happy clients. See why we're the trusted choice for professional contracting services.",
-  keywords: ["contractor reviews", "customer testimonials", "5 star contractor", "best contractor"],
+  title: "Client Reviews | Big Country Landscaping & Maintenance Ltd",
+  description: "Read what commercial clients say about Big Country Landscaping. Property managers, developers, and operations teams across Alberta.",
+  keywords: ["Big Country Landscaping reviews", "excavation contractor reviews Alberta", "commercial snow removal reviews"],
 };
 
 export default function ReviewsPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-[#094026] via-[#0a5530] to-[#063d22] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-[#0f1f2d] via-[#2d4f64] to-[#0f1f2d] relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FCB215]/20 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F5A623]/20 rounded-full blur-[150px]" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 text-[#FCB215] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-[#F5A623] px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -25,14 +25,14 @@ export default function ReviewsPage() {
                   </svg>
                 ))}
               </div>
-              5.0 Rating
+              5.0 Rated
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
-              Customer
-              <span className="text-[#FCB215]"> Reviews</span>
+              Client
+              <span className="text-[#F5A623]"> Reviews</span>
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Don&apos;t just take our word for it. See what our satisfied customers have to say about working with us.
+              Commercial clients across Big Country, Alberta. Property managers, site superintendents, and developers.
             </p>
           </div>
         </div>
