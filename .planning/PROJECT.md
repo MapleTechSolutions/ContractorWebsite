@@ -2,89 +2,106 @@
 
 ## What This Is
 
-A complete, branded website for Big Country Landscaping & Maintenance Ltd, a contractor specializing in excavation and commercial snow removal. Built on an existing Next.js 14 template, this milestone transforms the generic demo into a real client-ready site with a bold industrial look, photo-heavy design, and mobile-first presentation optimized for showing the client on a phone.
+A heavy-equipment-forward contractor website for Big Country Landscaping & Maintenance Ltd, specializing in excavation/site work and commercial snow removal in Alberta. The site is built to convert commercial clients on first impression — dramatic machine photography, dark industrial design, and a no-nonsense layout that says "we have the iron to get it done." Built on Next.js 14, this milestone is a complete visual and structural overhaul of the existing branded foundation.
 
 ## Core Value
 
 A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
 
-## Current Milestone: v2.0 Big Country Rebrand
+## Current Milestone: v3.0 Industrial Redesign
 
-**Goal:** Transform the generic contractor template into a fully branded site for Big Country Landscaping & Maintenance Ltd — correct branding, services, content, design theme, and portfolio gallery with real client photos.
+**Goal:** Tear out the light/generic look and rebuild the site as a dark, machine-forward, conversion-focused contractor site — one that looks like it belongs alongside the best excavation and commercial snow removal companies in Alberta.
 
 **Target features:**
-- Complete rebrand: logo, company name, colors, and all placeholder content replaced
-- Dark industrial/bold theme derived from the logo (replacing current dark green + gold)
-- Two core service sections: Excavation and Snow Removal
-- Portfolio gallery with category filters (Excavation, Snow Removal, Site Prep)
-- Equipment Roster section showcasing key machines
-- Seasonal CTA bar (e.g., "Now Booking Spring Excavation")
-- Hero with inline quote form and strong action-shot background
-- Sticky header with phone number and Get a Quote CTA always visible
-- Mobile-first experience (demo on phone for client)
+- Dark near-black theme throughout — industrial, heavy, serious (inspired by Blackrock Excavating aesthetic)
+- Hero rebuilt: full-bleed machine photo, bold white headline, yellow CTA — no soft backgrounds
+- Two equal service pillars with dedicated hero photos: Excavation & Site Work / Snow & Ice Removal
+- "Why Big Country" numbered trust section (24/7, licensed, commercial-grade equipment, Alberta-based)
+- Equipment Roster section — machines are the trust signal, not just a list
+- Portfolio gallery — filterable by category, lightbox with swipe + keyboard nav
+- Gallery linked in nav and previewed on homepage
+- Testimonials on dark background
+- Commercial-focused copy throughout (no residential lawn service language)
+- Mobile-first polish: 48px touch targets, reduced motion, ARIA
+- Trust badges: WCB Alberta, Licensed & Insured, 24/7 Available
 
 ## Requirements
 
 ### Validated
 
-- ✓ Next.js 14 App Router site with Tailwind CSS 3 — existing foundation
-- ✓ Responsive mobile-first design patterns — existing
-- ✓ Header with nav + Footer + MobileStickyCTA — existing
-- ✓ Custom utility classes (section-padding, container-custom, btn-*) — existing
-- ✓ Contact form, Services, About, Reviews pages — existing structure
+- ✓ Next.js 14 App Router site with Tailwind CSS 3 — foundation in place
+- ✓ Responsive mobile-first design patterns — established
+- ✓ Header, Footer, MobileStickyCTA — structural components exist
+- ✓ Big Country logo (PNG + SVG) integrated into Header and Footer — Phase 1 complete
+- ✓ Brand color tokens defined in tailwind.config.ts — Phase 1 complete
+- ✓ Montserrat via next/font/google with --font-montserrat CSS variable — Phase 1 complete
+- ✓ SeasonalBar component with Framer Motion + session dismiss — Phase 1 complete
+- ✓ Hero quick-quote form and contact form with UI state handling — Phase 1 complete
+- ✓ All content rewritten with Big Country identity — Phase 1 complete
 
 ### Active
 
-- [ ] All placeholder content replaced with Big Country Landscaping branding
-- [ ] Logo (PNG/SVG already created) integrated into Header and Footer
-- [ ] New dark industrial color theme derived from logo colors
-- [ ] Hero section with strong excavation/snow imagery and inline quote form
-- [ ] Seasonal announcement bar at top (togglable message)
-- [ ] Sticky header — phone number + "Get a Quote" always visible
-- [ ] Services page: Excavation (site clearing, grading, trenching, demolition) + Snow Removal (commercial lots, salting, hauling)
-- [ ] Equipment Roster section showcasing their key machines with photos
-- [ ] Portfolio gallery — filterable by Excavation / Snow Removal / Site Prep
-- [ ] Lightbox to view project photos enlarged with keyboard navigation
-- [ ] Gallery integrated into nav and homepage preview
-- [ ] Real client photos wired in where provided (with easy swap for more later)
-- [ ] Mobile-optimized: 48px touch targets, smooth scroll, no interaction friction
+- [ ] Dark near-black background replaces current light/mid theme site-wide
+- [ ] Hero rebuilt as full-bleed, machine-forward, dark overlay with bold white headline
+- [ ] Navigation redesigned: dark bar, minimal links (max 6), phone + CTA always visible
+- [ ] Typography hardened: headings at weight 800+, tight letter-spacing, industrial feel
+- [ ] Two service pillar sections on homepage (Excavation + Snow Removal) with photos
+- [ ] "Why Big Country" numbered list section (01–04)
+- [ ] Testimonials section with dark background
+- [ ] Final CTA banner before footer
+- [ ] Equipment Roster section on homepage with machine cards
+- [ ] Portfolio gallery page (filterable grid + lightbox)
+- [ ] Gallery preview on homepage ("See Our Work")
+- [ ] Gallery linked in desktop nav and mobile menu
+- [ ] Services page rebuilt with Excavation and Snow Removal deep dives
+- [ ] About page reflects Big Country's story and commercial focus
+- [ ] Trust badges visible: WCB Alberta, Licensed & Insured, 24/7
+- [ ] All touch targets minimum 48px
+- [ ] Reduced motion compliance for all animations
+- [ ] ARIA labels on interactive gallery + nav elements
+- [ ] All images use next/image with required alt text
+- [ ] Zero hardcoded legacy hex values remaining in any component
 
 ### Out of Scope
 
-- Image upload / CMS — static data, photos added to codebase directly
-- Video content — photos only for v2.0
-- Online booking / payment — lead gen only (phone + quote form)
-- Before/after comparison — v3 if client wants it
-- Comments or reviews integration — static testimonials only
+- CMS or image upload — static photos in codebase, client adds via code
+- Video content — photos only for v3.0
+- Online booking or payment — lead gen via phone + quote form only
+- Before/after photo comparison — v4 if client wants it
+- Live reviews integration — static testimonials only
+- Blog or news section — v4+
 
 ## Context
 
-- Existing site: Generic contractor template at `/abc-roofing/`
+- Codebase lives at: `abc-roofing/` (nested git repo — commit separately)
 - Tech stack: Next.js 14 App Router, TypeScript, Tailwind CSS v3
-- Logo files already exist in project root (PNG + SVG)
-- Client business: Excavation + Commercial Snow Removal in Alberta (Big Country = rural/agricultural area)
-- Priority viewpoint: Mobile phone (for client demo) — must also look excellent on desktop
-- Photography: Client will provide real equipment and job site photos — slots must be ready
-- Placeholder contact: (587) 555-1234 | info@bigcountrylandscaping.ca
-- framer-motion and lucide-react not yet installed — required for gallery
+- Installed: framer-motion, lucide-react, yet-another-react-lightbox, sharp
+- Brand colors: brand-dark #0f1f2d, brand-mid #2d4f64, brand-light #3d6882, brand-accent #F5A623, brand-surface #f7f4ef
+- Competitor references reviewed: Alchemy Landscape, Alchemy Snow Commercial, UnderDogg Construction, LaMu & Sons, Blackrock Excavating
+- Client photos on hand: Kobelco excavator on job site, mini-ex with worker, Deere track loader doing night snow removal
+- Client business: Commercial excavation + snow removal in Alberta — heavy iron, not residential
+- Priority viewpoint: Mobile phone (client demo on phone) — desktop must also be excellent
+- Seasonal bar already built — just needs message updates
 
 ## Constraints
 
 - **Tech stack**: Next.js 14 + Tailwind CSS v3 — no framework changes
-- **Logo**: Use the existing Excavator and Snow Plow in Motion logo files
-- **Mobile-first**: Every interaction must be smooth on a 390px phone screen
-- **Performance**: Real images must use next/image for optimization
-- **No backend**: Static site, no database, no auth — lead gen via form only
+- **Logo**: Use existing Excavator and Snow Plow in Motion logo files (PNG + SVG)
+- **Mobile-first**: Every interaction smooth on 390px phone
+- **Performance**: All images via next/image
+- **No backend**: Static site, lead gen only
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Transform existing template vs build from scratch | Foundation is solid, faster to rebrand than rebuild | — Pending |
-| Dark industrial theme vs original dark green + gold | Big Country brand is about heavy iron, not residential landscaping | — Pending |
-| Static photos in codebase vs CMS | v2.0 scope, client can add photos directly; CMS is v3+ | — Pending |
-| framer-motion for gallery animations | Smooth filter transitions and lightbox are worth the dependency | — Pending |
-| Equipment Roster as dedicated section | Excavation clients want to know what equipment is available | — Pending |
+| Dark near-black theme (not light/clean) | Client's brand is heavy iron + night operations — dark matches the work | ✓ Good |
+| Machine-forward hero, not text-first | Equipment IS the trust signal for commercial clients | ✓ Good |
+| Two equal service pillars vs long list | Excavation and Snow Removal are distinct commercial services, both deserve weight | ✓ Good |
+| Static photos vs CMS | v3.0 scope — client provides photos, dropped into codebase | — Pending |
+| yet-another-react-lightbox (not react-image-lightbox) | react-image-lightbox abandoned 2022, breaks on React 18 | ✓ Good |
+| Equipment Roster as dedicated section | Excavation clients want to know the iron — it's a differentiator | ✓ Good |
+| Absorb v2.0 Phases 2–3 into v3.0 | Gallery + Equipment were unbuilt; redesign touches those components anyway | — Pending |
 
 ---
-*Last updated: 2026-03-03 after v2.0 milestone start*
+*Last updated: 2026-03-04 after v3.0 milestone start — full visual redesign*
