@@ -10,25 +10,25 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 ## Current Position
 
 Phase: 4 of 6 (Dark Theme Overhaul + Homepage Rebuild)
-Plan: 1 of TBD in current phase
-Status: In progress — 04-01 complete (dark body bg + colorScheme)
-Last activity: 2026-03-04 — Completed 04-01-PLAN.md (global dark theme foundation)
+Plan: 2 of TBD in current phase
+Status: In progress — 04-02 complete (always-dark header + photo staging)
+Last activity: 2026-03-04 — Completed 04-02-PLAN.md (header dark rebuild + client photo staging)
 
-Progress: [████......] ~22% (Phase 1 of 6 complete + Plan 04-01; 4 plans done total)
+Progress: [████░.....] ~25% (Phase 1 of 6 complete + Plans 04-01, 04-02; 5 plans done total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 5
 - Average duration: ~8 min
-- Total execution time: ~0.53 hours
+- Total execution time: ~0.60 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-rebrand-foundation | 3/3 | ~27 min | ~9 min |
-| 04-dark-theme-homepage | 1/TBD | ~5 min | ~5 min |
+| 04-dark-theme-homepage | 2/TBD | ~13 min | ~6.5 min |
 | 05-gallery-equipment | 0/TBD | — | — |
 | 06-services-content-polish | 0/TBD | — | — |
 
@@ -60,6 +60,9 @@ Recent decisions affecting current work:
 - body background set to raw CSS `background: #0f1f2d` (not Tailwind class) — fires at CSS parse time, eliminates white flash before hydration (D-401)
 - sticky-cta-mobile uses `border-white/10` for subtle separator on dark bg (D-402)
 - Dark canvas is now default — Phase 4 component changes build on dark, not override light (D-403)
+- Header isScrolled retained for opacity-only transition (80% → 95%) + backdrop-blur — never changes color scheme on scroll (D-404)
+- Mobile nav links use font-black (900) — industrial weight, matches brand direction (D-405)
+- Photo staging: hero-excavator.jpg = big country.jpg; semantic image-to-section correctness deferred to Plan 07 human checkpoint (D-406)
 
 ### Pending Todos
 
@@ -67,11 +70,11 @@ None.
 
 ### Blockers/Concerns
 
-None. v3.0 roadmap established. Phase 4 (Dark Theme Overhaul + Homepage Rebuild) ready to plan.
+None. Three client photos staged. Header is always-dark. Plan 04-03 (Hero section rebuild) is unblocked.
 
 ## Session Continuity
 
 Last session: 2026-03-04
-Stopped at: Completed 04-01-PLAN.md — global dark theme foundation (body bg + colorScheme)
+Stopped at: Completed 04-02-PLAN.md — always-dark header + photo staging
 Resume file: None
-Next action: Execute 04-02-PLAN.md
+Next action: Execute 04-03-PLAN.md
