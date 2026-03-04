@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,12 +16,19 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#0f1f2d]">
-      {/* Optimized gradient background - reduced blur for mobile performance */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0f1f2d] via-[#2d4f64] to-[#0f1f2d]" />
-        <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#F5A623]/15 md:bg-[#F5A623]/20 rounded-full blur-[80px] md:blur-[150px] -translate-y-1/2 translate-x-1/2" />
-      </div>
-
+      {/* Machine photo background */}
+      <Image
+        src="/images/hero-excavator.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-[#0f1f2d]/70" />
+      {/* Subtle gradient for bottom legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f2d]/40 to-transparent" />
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:60px_60px]" />
 
