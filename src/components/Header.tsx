@@ -45,8 +45,8 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white shadow-lg shadow-black/5 py-2 md:py-3"
-            : "bg-transparent py-3 md:py-5"
+            ? "bg-[#0f1f2d]/95 backdrop-blur-sm shadow-lg shadow-black/30 py-2 md:py-3"
+            : "bg-[#0f1f2d]/80 backdrop-blur-sm py-3 md:py-5"
         }`}
       >
         <div className="container-custom">
@@ -63,12 +63,10 @@ export default function Header() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className={`text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled || isMobileMenuOpen ? "text-[#0f1f2d]" : "text-white"
-                }`}>
+                <span className="text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 text-white">
                   Big Country Landscaping
                 </span>
-                <span className={`text-[8px] md:text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300 text-[#F5A623]`}>
+                <span className="text-[8px] md:text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300 text-[#F5A623]">
                   Excavation & Snow Removal
                 </span>
               </div>
@@ -83,9 +81,7 @@ export default function Header() {
                   className={`px-4 py-2 font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
                     isActive(link.href)
                       ? "text-[#F5A623]"
-                      : isScrolled
-                        ? "text-[#0f1f2d] hover:text-[#F5A623]"
-                        : "text-white/90 hover:text-[#F5A623]"
+                      : "text-white/80 hover:text-[#F5A623]"
                   }`}
                 >
                   {link.label}
@@ -98,9 +94,7 @@ export default function Header() {
               <a
                 href="tel:+15875551234"
                 aria-label="Call (587) 555-1234"
-                className={`flex items-center gap-2 font-bold transition-all duration-300 ${
-                  isScrolled ? "text-[#0f1f2d] hover:text-[#F5A623]" : "text-white hover:text-[#F5A623]"
-                }`}
+                className="flex items-center gap-2 font-bold transition-all duration-300 text-white hover:text-[#F5A623]"
               >
                 <svg
                   className="w-5 h-5 text-[#F5A623]"
@@ -125,11 +119,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-xl transition-all duration-300 z-50 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation ${
-                isScrolled || isMobileMenuOpen
-                  ? "text-[#0f1f2d] hover:bg-gray-100"
-                  : "text-white hover:bg-white/10"
-              }`}
+              className="lg:hidden p-2 rounded-xl transition-all duration-300 z-50 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation text-white hover:bg-white/10"
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -153,7 +143,7 @@ export default function Header() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-white"
+          className="absolute inset-0 bg-[#0f1f2d]"
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
@@ -168,10 +158,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-4 text-2xl font-bold uppercase tracking-wider transition-all duration-300 border-b border-gray-100 ${
+                className={`py-4 text-2xl font-black uppercase tracking-wider transition-all duration-300 border-b border-white/10 ${
                   isActive(link.href)
                     ? "text-[#F5A623]"
-                    : "text-[#0f1f2d] active:text-[#F5A623]"
+                    : "text-white active:text-[#F5A623]"
                 }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : '0ms',
@@ -185,11 +175,11 @@ export default function Header() {
           </nav>
 
           {/* Bottom Actions */}
-          <div className="space-y-3 pt-6 border-t border-gray-200">
+          <div className="space-y-3 pt-6 border-t border-white/10">
             <a
               href="tel:+15875551234"
               aria-label="Call (587) 555-1234"
-              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl font-bold text-[#0f1f2d] bg-gray-100 active:bg-gray-200 transition-colors touch-manipulation"
+              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl font-bold text-white bg-white/10 active:bg-white/20 transition-colors touch-manipulation"
             >
               <svg className="w-5 h-5 text-[#F5A623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
