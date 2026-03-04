@@ -13,13 +13,13 @@ export default function Footer() {
             {/* Company Info */}
             <div className="col-span-2 md:col-span-2 lg:col-span-1">
               <Link href="/" className="flex items-center gap-2 md:gap-3 mb-5 md:mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-[#F5A623] rounded-xl flex items-center justify-center shadow-lg shadow-[#F5A623]/20">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
                   <Image
                     src="/logo.svg"
                     alt="Big Country Landscaping & Maintenance Ltd"
-                    width={48}
-                    height={48}
-                    className="object-contain"
+                    width={56}
+                    height={56}
+                    className="w-full h-full"
                   />
                 </div>
                 <div>

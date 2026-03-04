@@ -53,17 +53,13 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 md:gap-3 group z-50">
-              <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                isScrolled || isMobileMenuOpen
-                  ? "bg-[#0f1f2d]"
-                  : "bg-[#F5A623]"
-              }`}>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/logo.svg"
                   alt="Big Country Landscaping & Maintenance Ltd"
                   width={48}
                   height={48}
-                  className="object-contain"
+                  className="w-full h-full"
                 />
               </div>
               <div className="flex flex-col">
