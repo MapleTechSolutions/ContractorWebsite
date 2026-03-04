@@ -70,25 +70,25 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust indicators - Scroll on mobile */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-6 text-white/60">
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            {/* Trust badge pills - CONV-02, CONV-03 */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <div className="flex items-center gap-2 bg-white/10 border border-white/10 px-3 py-2 rounded-lg">
+                <svg className="w-4 h-4 text-[#F5A623] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-xs md:text-sm font-medium whitespace-nowrap">WCB Alberta Compliant</span>
+                <span className="text-xs font-semibold text-white/90 whitespace-nowrap">Licensed &amp; Insured</span>
               </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center gap-2 bg-white/10 border border-white/10 px-3 py-2 rounded-lg">
+                <svg className="w-4 h-4 text-[#F5A623] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-xs md:text-sm font-medium whitespace-nowrap">Alberta One-Call Certified</span>
+                <span className="text-xs font-semibold text-white/90 whitespace-nowrap">WCB Alberta</span>
               </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              <div className="flex items-center gap-2 bg-white/10 border border-white/10 px-3 py-2 rounded-lg">
+                <svg className="w-4 h-4 text-[#F5A623] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-xs md:text-sm font-medium whitespace-nowrap">Free Site Estimates</span>
+                <span className="text-xs font-semibold text-white/90 whitespace-nowrap">24/7 Available</span>
               </div>
             </div>
           </div>
