@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,25 +13,29 @@ export default function Footer() {
             {/* Company Info */}
             <div className="col-span-2 md:col-span-2 lg:col-span-1">
               <Link href="/" className="flex items-center gap-2 md:gap-3 mb-5 md:mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FCB215] rounded-xl flex items-center justify-center shadow-lg shadow-[#FCB215]/20">
-                  <svg className="w-5 h-5 md:w-7 md:h-7 text-[#094026]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-[#F5A623] rounded-xl flex items-center justify-center shadow-lg shadow-[#F5A623]/20">
+                  <Image
+                    src="/logo.svg"
+                    alt="Big Country Landscaping & Maintenance Ltd"
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
-                  <span className="text-lg md:text-xl font-bold">COMPANY NAME</span>
-                  <span className="block text-[10px] md:text-xs text-[#FCB215] font-semibold tracking-widest uppercase">Professional Contractors</span>
+                  <span className="text-lg md:text-xl font-bold">Big Country Landscaping &amp; Maintenance Ltd</span>
+                  <span className="block text-[10px] md:text-xs text-[#F5A623] font-semibold tracking-widest uppercase">Excavation & Snow Removal</span>
                 </div>
               </Link>
               <p className="text-gray-400 mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                Your trusted local contractor for over 15 years. Quality workmanship and honest service on every project.
+                Big Country Landscaping &amp; Maintenance Ltd has been serving commercial and industrial clients across the Big Country region of Alberta for over 15 years.
               </p>
               <div className="flex gap-2 md:gap-3">
                 {["facebook", "instagram", "google"].map((social) => (
                   <a
                     key={social}
                     href="#"
-                    className="w-10 h-10 md:w-10 md:h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center active:bg-[#FCB215] active:border-[#FCB215] active:text-[#094026] transition-all duration-200 touch-manipulation"
+                    className="w-10 h-10 md:w-10 md:h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center active:bg-[#F5A623] active:border-[#F5A623] active:text-[#0f1f2d] transition-all duration-200 touch-manipulation"
                     aria-label={social}
                   >
                     {social === "facebook" && (
@@ -65,8 +70,8 @@ export default function Footer() {
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-gray-400 active:text-[#FCB215] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
-                      <svg className="w-3 h-3 md:w-4 md:h-4 text-[#FCB215] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <Link href={link.href} className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
+                      <svg className="w-3 h-3 md:w-4 md:h-4 text-[#F5A623] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       {link.label}
@@ -80,10 +85,10 @@ export default function Footer() {
             <div>
               <h4 className="text-base md:text-lg font-bold mb-4 md:mb-6">Our Services</h4>
               <ul className="space-y-2 md:space-y-3">
-                {["Residential", "Commercial", "Renovations", "Repairs", "Construction"].map((service) => (
+                {["Excavation", "Snow Removal", "Site Clearing", "Rough Grading", "Utility Trenching"].map((service) => (
                   <li key={service}>
-                    <Link href="/services" className="text-gray-400 active:text-[#FCB215] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
-                      <svg className="w-3 h-3 md:w-4 md:h-4 text-[#FCB215] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <Link href="/services" className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
+                      <svg className="w-3 h-3 md:w-4 md:h-4 text-[#F5A623] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       {service}
@@ -91,6 +96,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+              <p className="text-white/50 text-sm mt-4">Serving Big Country region, Alberta</p>
             </div>
 
             {/* Contact */}
@@ -98,35 +104,34 @@ export default function Footer() {
               <h4 className="text-base md:text-lg font-bold mb-4 md:mb-6">Contact</h4>
               <ul className="space-y-3 md:space-y-4">
                 <li>
-                  <a href="tel:5551234567" className="flex items-center gap-3 text-gray-400 active:text-[#FCB215] transition-colors touch-manipulation">
-                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#094026] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 md:w-5 md:h-5 text-[#FCB215]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <a href="tel:+15875551234" className="flex items-center gap-3 text-gray-400 active:text-[#F5A623] transition-colors touch-manipulation">
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#0f1f2d] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-sm md:text-base">(555) 123-4567</span>
+                    <span className="font-semibold text-sm md:text-base">(587) 555-1234</span>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@company.com" className="flex items-center gap-3 text-gray-400 active:text-[#FCB215] transition-colors touch-manipulation">
-                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#094026] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 md:w-5 md:h-5 text-[#FCB215]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <a href="mailto:info@bigcountrylandscaping.ca" className="flex items-center gap-3 text-gray-400 active:text-[#F5A623] transition-colors touch-manipulation">
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#0f1f2d] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span className="text-sm md:text-base">info@company.com</span>
+                    <span className="text-sm md:text-base">info@bigcountrylandscaping.ca</span>
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-gray-400">
-                  <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#094026] flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 md:w-5 md:h-5 text-[#FCB215]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#0f1f2d] flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 md:w-5 md:h-5 text-[#F5A623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div className="text-sm md:text-base">
-                    <div>Mon-Fri: 8AM-6PM</div>
-                    <div>Sat: 9AM-2PM</div>
-                    <div className="text-[#FCB215] font-bold">Free Estimates</div>
+                    <div>Mon-Fri: 7AM-6PM</div>
+                    <div className="text-[#F5A623] font-bold">On-call for emergencies</div>
                   </div>
                 </li>
               </ul>
@@ -140,12 +145,12 @@ export default function Footer() {
         <div className="container-custom py-4 md:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
             <p className="text-gray-500 text-xs md:text-sm text-center md:text-left">
-              &copy; {currentYear} Company Name. All rights reserved.
+              &copy; {currentYear} Big Country Landscaping &amp; Maintenance Ltd. All rights reserved.
             </p>
             <div className="flex gap-4 md:gap-6 text-xs md:text-sm">
-              <a href="#" className="text-gray-500 active:text-[#FCB215] transition-colors touch-manipulation">Privacy Policy</a>
-              <a href="#" className="text-gray-500 active:text-[#FCB215] transition-colors touch-manipulation">Terms of Service</a>
-              <a href="/sitemap.xml" className="text-gray-500 active:text-[#FCB215] transition-colors touch-manipulation">Sitemap</a>
+              <a href="#" className="text-gray-500 active:text-[#F5A623] transition-colors touch-manipulation">Privacy Policy</a>
+              <a href="#" className="text-gray-500 active:text-[#F5A623] transition-colors touch-manipulation">Terms of Service</a>
+              <a href="/sitemap.xml" className="text-gray-500 active:text-[#F5A623] transition-colors touch-manipulation">Sitemap</a>
             </div>
           </div>
         </div>

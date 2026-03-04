@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -54,26 +55,25 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2 md:gap-3 group z-50">
               <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
                 isScrolled || isMobileMenuOpen
-                  ? "bg-[#094026]"
-                  : "bg-[#FCB215]"
+                  ? "bg-[#0f1f2d]"
+                  : "bg-[#F5A623]"
               }`}>
-                <svg
-                  className={`w-5 h-5 md:w-6 md:h-6 transition-colors duration-300 ${isScrolled || isMobileMenuOpen ? "text-[#FCB215]" : "text-[#094026]"}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+                <Image
+                  src="/logo.svg"
+                  alt="Big Country Landscaping & Maintenance Ltd"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className={`text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled || isMobileMenuOpen ? "text-[#094026]" : "text-white"
+                  isScrolled || isMobileMenuOpen ? "text-[#0f1f2d]" : "text-white"
                 }`}>
-                  COMPANY NAME
+                  Big Country Landscaping
                 </span>
-                <span className={`text-[8px] md:text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300 text-[#FCB215]`}>
-                  Professional Contractors
+                <span className={`text-[8px] md:text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300 text-[#F5A623]`}>
+                  Excavation & Snow Removal
                 </span>
               </div>
             </Link>
@@ -86,10 +86,10 @@ export default function Header() {
                   href={link.href}
                   className={`px-4 py-2 font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
                     isActive(link.href)
-                      ? "text-[#FCB215]"
+                      ? "text-[#F5A623]"
                       : isScrolled
-                        ? "text-[#094026] hover:text-[#FCB215]"
-                        : "text-white/90 hover:text-[#FCB215]"
+                        ? "text-[#0f1f2d] hover:text-[#F5A623]"
+                        : "text-white/90 hover:text-[#F5A623]"
                   }`}
                 >
                   {link.label}
@@ -100,13 +100,14 @@ export default function Header() {
             {/* CTA Button & Phone (Desktop) */}
             <div className="hidden md:flex items-center gap-4 lg:gap-6">
               <a
-                href="tel:5551234567"
+                href="tel:+15875551234"
+                aria-label="Call (587) 555-1234"
                 className={`flex items-center gap-2 font-bold transition-all duration-300 ${
-                  isScrolled ? "text-[#094026] hover:text-[#FCB215]" : "text-white hover:text-[#FCB215]"
+                  isScrolled ? "text-[#0f1f2d] hover:text-[#F5A623]" : "text-white hover:text-[#F5A623]"
                 }`}
               >
                 <svg
-                  className="w-5 h-5 text-[#FCB215]"
+                  className="w-5 h-5 text-[#F5A623]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -118,10 +119,10 @@ export default function Header() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="hidden xl:inline">(555) 123-4567</span>
+                <span className="hidden xl:inline">(587) 555-1234</span>
               </a>
               <Link href="/contact" className="btn-primary !py-3 !px-6">
-                Free Estimate
+                Get a Quote
               </Link>
             </div>
 
@@ -130,7 +131,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`lg:hidden p-2 rounded-xl transition-all duration-300 z-50 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation ${
                 isScrolled || isMobileMenuOpen
-                  ? "text-[#094026] hover:bg-gray-100"
+                  ? "text-[#0f1f2d] hover:bg-gray-100"
                   : "text-white hover:bg-white/10"
               }`}
               aria-label="Toggle menu"
@@ -173,8 +174,8 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`py-4 text-2xl font-bold uppercase tracking-wider transition-all duration-300 border-b border-gray-100 ${
                   isActive(link.href)
-                    ? "text-[#FCB215]"
-                    : "text-[#094026] active:text-[#FCB215]"
+                    ? "text-[#F5A623]"
+                    : "text-[#0f1f2d] active:text-[#F5A623]"
                 }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : '0ms',
@@ -190,20 +191,21 @@ export default function Header() {
           {/* Bottom Actions */}
           <div className="space-y-3 pt-6 border-t border-gray-200">
             <a
-              href="tel:5551234567"
-              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl font-bold text-[#094026] bg-gray-100 active:bg-gray-200 transition-colors touch-manipulation"
+              href="tel:+15875551234"
+              aria-label="Call (587) 555-1234"
+              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl font-bold text-[#0f1f2d] bg-gray-100 active:bg-gray-200 transition-colors touch-manipulation"
             >
-              <svg className="w-5 h-5 text-[#FCB215]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[#F5A623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              (555) 123-4567
+              (587) 555-1234
             </a>
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-primary w-full text-center py-4"
             >
-              Get Free Estimate
+              Get a Quote
             </Link>
           </div>
         </div>
