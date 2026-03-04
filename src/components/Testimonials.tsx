@@ -56,21 +56,21 @@ export default function Testimonials() {
   }, [isPaused, goToNext]);
 
   return (
-    <section id="testimonials" className="section-padding bg-white">
+    <section id="testimonials" className="section-padding bg-[#0f1f2d]">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#F5A623]/10 text-[#0f1f2d] px-4 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-[#F5A623] px-4 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
             </svg>
             Reviews
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0f1f2d] mb-4 md:mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 md:mb-5">
             What Commercial
             <span className="text-[#F5A623]"> Clients Say</span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our commercial clients across Big Country, Alberta have to say.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function Testimonials() {
         {/* Testimonials Slider */}
         <div className="max-w-4xl mx-auto">
           <div
-            className="relative bg-[#f8f9fa] rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 border border-gray-100 shadow-xl shadow-gray-200/50"
+            className="relative bg-white/5 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 border border-white/10 shadow-xl shadow-black/30"
             onTouchStart={() => setIsPaused(true)}
             onTouchEnd={() => setIsPaused(false)}
             onMouseEnter={() => setIsPaused(true)}
@@ -107,7 +107,7 @@ export default function Testimonials() {
                 {testimonials.map((testimonial, index) => (
                   <p
                     key={testimonial.id}
-                    className={`text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed transition-all duration-500 ${
+                    className={`text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed transition-all duration-500 ${
                       index === activeIndex
                         ? "opacity-100 translate-y-0 relative"
                         : "opacity-0 absolute top-0 left-0 right-0 translate-y-4 pointer-events-none"
@@ -127,10 +127,10 @@ export default function Testimonials() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-[#0f1f2d] text-base md:text-lg">
+                    <div className="font-semibold text-white text-base md:text-lg">
                       {testimonials[activeIndex].name}
                     </div>
-                    <div className="text-gray-500 text-sm md:text-base">
+                    <div className="text-white/50 text-sm md:text-base">
                       {testimonials[activeIndex].location}
                     </div>
                   </div>
@@ -145,10 +145,10 @@ export default function Testimonials() {
             <div className="flex items-center justify-between mt-6 md:hidden">
               <button
                 onClick={goToPrev}
-                className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm active:bg-gray-100 touch-manipulation"
+                className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shadow-sm active:bg-white/20 touch-manipulation"
                 aria-label="Previous testimonial"
               >
-                <svg className="w-5 h-5 text-[#0f1f2d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
@@ -160,7 +160,7 @@ export default function Testimonials() {
                     className={`transition-all duration-300 rounded-full touch-manipulation ${
                       index === activeIndex
                         ? "w-8 h-3 bg-[#F5A623]"
-                        : "w-3 h-3 bg-gray-300"
+                        : "w-3 h-3 bg-white/20"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -168,10 +168,10 @@ export default function Testimonials() {
               </div>
               <button
                 onClick={goToNext}
-                className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm active:bg-gray-100 touch-manipulation"
+                className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shadow-sm active:bg-white/20 touch-manipulation"
                 aria-label="Next testimonial"
               >
-                <svg className="w-5 h-5 text-[#0f1f2d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -186,7 +186,7 @@ export default function Testimonials() {
                   className={`transition-all duration-300 rounded-full ${
                     index === activeIndex
                       ? "w-8 h-3 bg-[#F5A623]"
-                      : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
+                      : "w-3 h-3 bg-white/20 hover:bg-white/40"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -197,7 +197,7 @@ export default function Testimonials() {
 
         {/* Reviews Badge */}
         <div className="mt-8 md:mt-12 flex justify-center">
-          <div className="inline-flex items-center gap-3 md:gap-4 bg-[#f8f9fa] border border-gray-200 px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl">
+          <div className="inline-flex items-center gap-3 md:gap-4 bg-white/5 border border-white/10 px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl">
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -206,10 +206,10 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <span className="font-bold text-[#0f1f2d] text-base md:text-lg">5.0</span>
+              <span className="font-bold text-white text-base md:text-lg">5.0</span>
             </div>
-            <div className="h-5 md:h-6 w-px bg-gray-300" />
-            <span className="text-gray-600 text-sm md:text-base">Based on <span className="font-semibold text-[#0f1f2d]">100+</span> reviews</span>
+            <div className="h-5 md:h-6 w-px bg-white/20" />
+            <span className="text-white/60 text-sm md:text-base">Based on <span className="font-semibold text-white">100+</span> reviews</span>
           </div>
         </div>
       </div>
