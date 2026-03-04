@@ -27,8 +27,8 @@
 
 ### Forms
 
-- [ ] **FORM-01**: Hero quick-quote form connected to Formspree (currently has no submit handler — all leads silently lost)
-- [ ] **FORM-02**: Contact page form connected to Formspree (currently uses fake setTimeout — all leads silently lost)
+- [ ] **FORM-01**: Hero quick-quote form has proper UI state — loading spinner on submit, success message on completion (no real backend required for demo)
+- [ ] **FORM-02**: Contact page form has proper UI state — loading spinner on submit, success message on completion (no real backend required for demo)
 
 ### Seasonal Bar
 

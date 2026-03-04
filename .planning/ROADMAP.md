@@ -25,8 +25,8 @@
 
 - [ ] The Big Country Landscaping logo renders in the header and footer on every page — no generic placeholder icon or inline SVG house icon remains anywhere in the codebase
 - [ ] Every page displays "Big Country Landscaping & Maintenance Ltd" as the company name and (587) 555-1234 as a tappable tel: link in the sticky header, hero, footer, and mobile sticky CTA
-- [ ] Submitting the hero quick-quote form sends a real lead to Formspree and shows a genuine confirmation message — the fake setTimeout handler is gone and no leads are silently lost
-- [ ] Submitting the contact page form sends a real lead to Formspree and shows a genuine confirmation message — all leads are captured without any client configuration required
+- [ ] Submitting the hero quick-quote form shows a loading spinner then a success confirmation — form UI state works correctly, no real backend required for demo
+- [ ] Submitting the contact page form shows a loading spinner then a success confirmation — form UI state works correctly, no real backend required for demo
 - [ ] A seasonal announcement bar appears above the sticky header on every page load showing the current booking message from seasonal.ts, and dismisses for the rest of the browser session when the user closes it
 
 ---
