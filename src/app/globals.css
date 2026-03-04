@@ -35,8 +35,8 @@ html {
 
 body {
   font-family: var(--font-montserrat), system-ui, sans-serif;
-  color: #0f1f2d;
-  background: #ffffff;
+  color: #ffffff;
+  background: #0f1f2d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Prevent horizontal scroll on mobile */
@@ -207,7 +207,7 @@ body {
 
 /* Sticky CTA for mobile */
 .sticky-cta-mobile {
-  @apply fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 p-3 shadow-lg;
+  @apply fixed bottom-0 left-0 right-0 z-40 bg-[#0f1f2d] border-t border-white/10 p-3 shadow-lg;
   padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 }
 
