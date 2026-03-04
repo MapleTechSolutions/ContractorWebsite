@@ -13,17 +13,19 @@ A potential client sees the equipment, sees the work, and picks up the phone —
 **Goal:** Tear out the light/generic look and rebuild the site as a dark, machine-forward, conversion-focused contractor site — one that looks like it belongs alongside the best excavation and commercial snow removal companies in Alberta.
 
 **Target features:**
-- Dark near-black theme throughout — industrial, heavy, serious (inspired by Blackrock Excavating aesthetic)
-- Hero rebuilt: full-bleed machine photo, bold white headline, yellow CTA — no soft backgrounds
-- Two equal service pillars with dedicated hero photos: Excavation & Site Work / Snow & Ice Removal
-- "Why Big Country" numbered trust section (24/7, licensed, commercial-grade equipment, Alberta-based)
-- Equipment Roster section — machines are the trust signal, not just a list
-- Portfolio gallery — filterable by category, lightbox with swipe + keyboard nav
-- Gallery linked in nav and previewed on homepage
-- Testimonials on dark background
-- Commercial-focused copy throughout (no residential lawn service language)
+- Hybrid dark/light alternating section layout — dark hero + CTA sections, clean white/light content sections (matches the clean modern logo, inspired by Alchemy Landscape's premium feel)
+- Hero rebuilt: full-bleed machine photo with dark overlay, bold white headline, burnt-orange CTA
+- Two equal service pillar sections on white background — Excavation & Site Work / Snow & Ice Removal
+- "Why Big Country" numbered trust section on dark navy panel (01–04, orange numbers)
+- Equipment Roster on light background — machines pop against clean backdrop
+- Portfolio gallery filterable by category, lightbox with swipe + keyboard nav
+- Gallery linked in nav and previewed on homepage (light section)
+- Testimonials on dark background with star ratings
+- Final CTA banner dark — urgency
+- Commercial-focused copy throughout
 - Mobile-first polish: 48px touch targets, reduced motion, ARIA
 - Trust badges: WCB Alberta, Licensed & Insured, 24/7 Available
+- Logo orange (#D4702A burnt orange) as the single accent color — matches actual logo
 
 ## Requirements
 
@@ -95,8 +97,9 @@ A potential client sees the equipment, sees the work, and picks up the phone —
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Dark near-black theme (not light/clean) | Client's brand is heavy iron + night operations — dark matches the work | ✓ Good |
-| Machine-forward hero, not text-first | Equipment IS the trust signal for commercial clients | ✓ Good |
+| Hybrid dark/light alternating sections (not all-dark) | Logo is clean and modern (thin black + orange) — all-dark Blackrock aesthetic would clash; Alchemy Landscape's hybrid is the right reference | ✓ Good |
+| Accent color = logo burnt orange ~#D4702A (not yellow #F5A623) | Actual logo orange is warm/burnt, not yellow-amber — must match for brand cohesion | ✓ Good |
+| Machine-forward hero on dark overlay, content on white | Dark hero = drama; white content = photography breathes; best of both | ✓ Good |
 | Two equal service pillars vs long list | Excavation and Snow Removal are distinct commercial services, both deserve weight | ✓ Good |
 | Static photos vs CMS | v3.0 scope — client provides photos, dropped into codebase | — Pending |
 | yet-another-react-lightbox (not react-image-lightbox) | react-image-lightbox abandoned 2022, breaks on React 18 | ✓ Good |
