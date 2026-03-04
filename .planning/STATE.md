@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 ## Current Position
 
 Phase: 4 of 6 (Dark Theme Overhaul + Homepage Rebuild)
-Plan: 2 of TBD in current phase
-Status: In progress — 04-02 complete (always-dark header + photo staging)
-Last activity: 2026-03-04 — Completed 04-02-PLAN.md (header dark rebuild + client photo staging)
+Plan: 4 of TBD in current phase
+Status: In progress — 04-04 complete (ServicePillars server component)
+Last activity: 2026-03-04 — Completed 04-04-PLAN.md (ServicePillars photo pillar component)
 
-Progress: [████░.....] ~25% (Phase 1 of 6 complete + Plans 04-01, 04-02; 5 plans done total)
+Progress: [████░.....] ~30% (Phase 1 of 6 complete + Plans 04-01, 04-02, 04-04; 6 plans done total)
 
 ## Performance Metrics
 
@@ -63,6 +63,8 @@ Recent decisions affecting current work:
 - Header isScrolled retained for opacity-only transition (80% → 95%) + backdrop-blur — never changes color scheme on scroll (D-404)
 - Mobile nav links use font-black (900) — industrial weight, matches brand direction (D-405)
 - Photo staging: hero-excavator.jpg = big country.jpg; semantic image-to-section correctness deferred to Plan 07 human checkpoint (D-406)
+- ServicePillars: new server component, ServicesPreview kept intact for /services page reuse (D-407)
+- ServicePillars data inline — no separate data file for two static pillars (D-408)
 
 ### Pending Todos
 
@@ -70,11 +72,11 @@ None.
 
 ### Blockers/Concerns
 
-None. Three client photos staged. Header is always-dark. Plan 04-03 (Hero section rebuild) is unblocked.
+None. ServicePillars component ready. Next: wire ServicePillars into homepage page.tsx (Plan 04-05 or 04-06).
 
 ## Session Continuity
 
 Last session: 2026-03-04
-Stopped at: Completed 04-02-PLAN.md — always-dark header + photo staging
+Stopped at: Completed 04-04-PLAN.md — ServicePillars server component
 Resume file: None
-Next action: Execute 04-03-PLAN.md
+Next action: Execute 04-05-PLAN.md
