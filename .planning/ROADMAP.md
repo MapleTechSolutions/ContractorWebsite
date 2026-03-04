@@ -1,79 +1,73 @@
-# Roadmap: Big Country Landscaping v2.0 Rebrand
+# Roadmap: Big Country Landscaping v3.0 Industrial Redesign
 
-**Milestone:** v2.0 Big Country Rebrand
+**Milestone:** v3.0 Industrial Redesign
 **Core value:** A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
-**Total phases:** 3
-**Total plans:** 7
+**Total phases:** 3 (Phases 4–6, continuing from v2.0 Phase 1 complete)
+**Total plans:** TBD — determined per phase during planning
 
 ---
 
-## Phase 1: Rebrand Foundation
+## Phase History (v2.0)
 
-**Goal:** The site looks and reads like Big Country Landscaping — correct brand colors, logo, and font are live, all placeholder content is replaced with real company identity, both forms are capturing leads via Formspree, and a seasonal booking bar is active above the header.
-**Dependencies:** None — this phase is the foundation all subsequent phases build on top of.
-**Requirements:** BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, CONT-01, CONT-02, CONT-03, CONT-04, CONT-05, CONT-06, CONT-07, CONT-08, CONT-09, FORM-01, FORM-02, SEAS-01, SEAS-02, MOBI-02
-
-### Plans
-
-| Plan | Name | Description |
-|------|------|-------------|
-| 01-01 | Color, Font, Logo, Layout | Define brand color tokens in tailwind.config.ts, replace all hardcoded legacy hex values codebase-wide, migrate to next/font/google for Montserrat, copy logo files to public/, integrate logo into Header and Footer, add SeasonalBar slot to layout.tsx |
-| 01-02 | Content Pass | Rewrite every existing component and page with Big Country identity — Hero headline and CTA, ServicesPreview (Excavation + Snow Removal), WhyChooseUs trust badges (WCB Alberta, Alberta One-Call compliance), TestimonialsPreview, CTASection, AboutPreview, About page, Services page, Reviews page, Contact page, all metadata and OG tags, phone number as tel: links in header, hero, footer, and MobileStickyCTA |
-| 01-03 | Forms and Seasonal Bar | Build SeasonalBar component with session-dismissable Framer Motion animation and message sourced from src/data/seasonal.ts, connect hero quick-quote form to Formspree, connect contact page form to Formspree, replace all fake submit handlers with real submission and error state handling |
-
-### Success Criteria
-
-- [ ] The Big Country Landscaping logo renders in the header and footer on every page — no generic placeholder icon or inline SVG house icon remains anywhere in the codebase
-- [ ] Every page displays "Big Country Landscaping & Maintenance Ltd" as the company name and (587) 555-1234 as a tappable tel: link in the sticky header, hero, footer, and mobile sticky CTA
-- [ ] Submitting the hero quick-quote form shows a loading spinner then a success confirmation — form UI state works correctly, no real backend required for demo
-- [ ] Submitting the contact page form shows a loading spinner then a success confirmation — form UI state works correctly, no real backend required for demo
-- [ ] A seasonal announcement bar appears above the sticky header on every page load showing the current booking message from seasonal.ts, and dismisses for the rest of the browser session when the user closes it
+| Phase | Goal | Status |
+|-------|------|--------|
+| 1 - Rebrand Foundation | Brand colors, logo, font, forms, seasonal bar live | Complete ✓ |
+| 2 - Gallery Feature | Superseded by v3.0 Phase 5 | Absorbed |
+| 3 - Equipment Roster + Polish | Superseded by v3.0 Phases 5–6 | Absorbed |
 
 ---
 
-## Phase 2: Gallery Feature
+## Phase 4: Dark Theme Overhaul + Homepage Rebuild
 
-**Goal:** Visitors can browse real project photos organized by service category on a dedicated gallery page and view any photo full-screen with swipe and keyboard navigation — the gallery is reachable from the primary nav and previewed on the homepage.
-**Dependencies:** Phase 1 must be complete — gallery components inherit the Phase 1 brand color tokens, and navigation changes build on the rebranded Header.
-**Requirements:** GALL-01, GALL-02, GALL-03, GALL-04, GALL-05, GALL-06, LBOX-01, LBOX-02, LBOX-03, LBOX-04, INTG-01, INTG-02, MOBI-03
+**Goal:** Every visitor to the homepage sees a dark, machine-forward site — near-black backgrounds throughout, a full-bleed hero with bold white headline and yellow CTA, two service pillars with dedicated photos, a numbered trust section, testimonials on dark, a final CTA banner, and a redesigned sticky nav — the site no longer looks light or generic.
 
-### Plans
+**Dependencies:** Phase 1 (v2.0) complete — brand color tokens, Montserrat font, logo, and SeasonalBar are already in place. This phase rebuilds on top of that foundation.
 
-| Plan | Name | Description |
-|------|------|-------------|
-| 02-01 | Dependencies, Data Model, Gallery Scaffold | Install framer-motion, lucide-react, yet-another-react-lightbox, and sharp; define GalleryItem TypeScript interface with alt as a required field; create src/lib/gallery-data.ts with six placeholder items across all three categories; build gallery/page.tsx with hero section, responsive 1/2/3-column grid, placeholder project cards using next/image with correct 4:3 aspect ratios, and All / Excavation / Snow Removal / Site Prep filter buttons |
-| 02-02 | Lightbox, Animations, Nav, Homepage Preview | Add AnimatePresence and layout animations to gallery grid filter transitions and card entrance animations using useReducedMotion() hook; wire yet-another-react-lightbox to project card clicks with swipe-left/right and keyboard ESC/arrow navigation; add Gallery to Header desktop nav and mobile menu; build GalleryPreview "See Our Work" section on the homepage with a link through to /gallery |
+**Requirements:** VSRL-01, VSRL-02, VSRL-03, VSRL-04, VSRL-05, NAV-01, NAV-02, HOME-01, HOME-02, HOME-03, HOME-06, HOME-07, CONV-01, CONV-02, CONV-03, CONV-04, CONV-05, CONT-03
 
 ### Success Criteria
 
-- [ ] Visiting /gallery shows a responsive grid of project cards — 1 column on mobile, 2 on tablet, 3 on desktop — with a themed hero section and filter buttons for All, Excavation, Snow Removal, and Site Prep above the grid
-- [ ] Clicking a filter button animates the grid reflow so only matching category cards are visible; clicking All restores the full grid; selecting a category with no photos shows a clear empty state message
-- [ ] Clicking any project card opens the photo full-screen in a lightbox with visible close, previous, and next controls that function correctly
-- [ ] Swiping left or right in the lightbox on a phone navigates to the previous or next photo without any additional tap required — swipe gesture works on the first try
-- [ ] A "See Our Work" gallery preview section is visible on the homepage, and the Gallery link appears in both the desktop navigation bar and the mobile menu
+- [ ] Opening the site on any page shows a dark near-black background as the dominant surface — no white or light-grey content areas remain as the primary background on any page
+- [ ] The hero section fills the viewport edge-to-edge with a machine photo, a dark overlay, a white headline at weight 800+, a yellow "Get a Quote" CTA button, and a "Call Now" tel: link — no soft background or light card visible in the hero
+- [ ] The sticky header is a dark bar showing the Big Country logo, max 6 nav links, a tappable phone number, and a "Get a Quote" button — all visible on scroll on both desktop and a 390px phone
+- [ ] The homepage scrolls through two equal service pillar sections (Excavation and Snow Removal), a numbered "Why Big Country" section with accent-colored numbers 01–04, a dark-background testimonials section, and a final CTA banner before the footer — all present in order, no placeholder content
+- [ ] Submitting the hero quick-quote form or the contact form shows a loading state followed by a success confirmation — and trust badges (WCB Alberta, Licensed & Insured, 24/7 Available) are visible on the homepage
 
 ---
 
-## Phase 3: Equipment Roster + Polish
+## Phase 5: Gallery + Equipment Roster
 
-**Goal:** The equipment roster section is live on the homepage showing key machines with photo-ready placeholder cards, all touch targets across the full site meet 48px minimums, reduced-motion and ARIA accessibility requirements are fully satisfied, and the site is confirmed production-ready with no legacy artifacts.
-**Dependencies:** Phase 2 must be complete — the equipment roster joins the homepage alongside the Phase 2 gallery preview, and mobile and accessibility polish covers the gallery interactions built in Phase 2.
-**Requirements:** ROST-01, ROST-02, ROST-03, INTG-03, MOBI-01, MOBI-04, MOBI-05
+**Goal:** Visitors can browse real project photos on a dedicated gallery page with category filters and full-screen lightbox navigation, an Equipment Roster section on the homepage shows key machines with photo slots, a gallery preview section appears on the homepage, and Gallery is wired into both the desktop nav and mobile menu.
 
-### Plans
+**Dependencies:** Phase 4 must be complete — gallery and roster components inherit the dark theme established in Phase 4, and the Gallery nav link extends the Phase 4 header redesign.
 
-| Plan | Name | Description |
-|------|------|-------------|
-| 03-01 | Equipment Data Model, Roster Component, Homepage Integration | Define EquipmentItem TypeScript interface (machine name, type, photo slot, description, service category); create src/lib/equipment-data.ts with placeholder machine entries; build EquipmentRoster component with next/image photo-ready card slots; wire EquipmentRoster into homepage layout |
-| 03-02 | Mobile Hardening, Accessibility, Performance Audit | Audit every interactive element site-wide for 48px minimum touch targets (gallery filter buttons, nav links, CTA buttons, lightbox controls, form inputs, mobile sticky CTA); add prefers-reduced-motion compliance to all gallery animations and seasonal bar dismiss animation; add ARIA labels and keyboard focus management to gallery filter buttons and lightbox modal; confirm zero plain img tags remain (all must use next/image); confirm zero hardcoded legacy hex values remain in any component file |
+**Requirements:** NAV-03, HOME-04, HOME-05, GALL-01, GALL-02, GALL-03, GALL-04, GALL-05, ROST-01, ROST-02, ROST-03
 
 ### Success Criteria
 
-- [ ] An Equipment Roster section renders on the homepage with a card for each machine entry showing the machine name, service category, description, and a correctly sized next/image photo slot that accepts a real client photo as a drop-in replacement
-- [ ] Every interactive element across the full site — gallery filter buttons, nav items, hero and contact form CTAs, lightbox controls, and mobile sticky CTA — presents a minimum 48px touch target verified on a 390px-wide phone screen
-- [ ] Loading the site on an OS with prefers-reduced-motion enabled results in no animated gallery grid reflows or card entrance animations — filters still function but all transitions are instant
-- [ ] All gallery filter buttons expose their label and selected state via ARIA attributes; the lightbox modal traps keyboard focus while open and returns focus to the triggering card when closed
-- [ ] A final codebase audit finds zero plain img tags and zero legacy hex values (#094026, #0a5530, #063d22, #FCB215, #e5a013) remaining in any component or page file
+- [ ] Visiting /gallery shows a responsive grid of project cards (1 column on 390px mobile, 2 on tablet, 3 on desktop) with filter buttons for All, Excavation, Snow Removal, and Site Prep — the Gallery link is present in both the desktop nav bar and the mobile menu
+- [ ] Clicking a filter button shows only matching cards and hides the rest; selecting a category with no photos shows a clear empty-state message; clicking All restores the full grid
+- [ ] Clicking any gallery photo opens a full-screen lightbox with visible close, previous, and next controls; swiping left or right on a phone navigates photos; pressing ESC or arrow keys on desktop also navigates
+- [ ] The homepage shows an Equipment Roster section with a card for each machine (at least 4 entries) displaying the machine name, type badge, description, and a correctly sized photo slot
+- [ ] A "See Our Work" gallery preview section is visible on the homepage above the footer with 3–6 sample project photos and a link through to /gallery
+
+---
+
+## Phase 6: Services Deep Dive + Content + Polish
+
+**Goal:** The services page gives commercial clients full detail on Excavation and Snow Removal offerings with dedicated hero photos and sub-service lists, the about page tells Big Country's commercial story, all page copy is free of residential language, and the full site passes a mobile and accessibility audit — 48px touch targets, reduced-motion compliance, ARIA labels, zero plain img tags, and zero legacy hex values.
+
+**Dependencies:** Phases 4 and 5 must be complete — the services page inherits the dark theme and interactive patterns (gallery, nav) established in earlier phases; the accessibility audit must cover all components including gallery and lightbox.
+
+**Requirements:** SERV-01, SERV-02, SERV-03, CONT-01, CONT-02, MOBI-01, MOBI-02, MOBI-03, MOBI-04, MOBI-05
+
+### Success Criteria
+
+- [ ] The services page has two clearly separated sections — Excavation & Site Work and Snow & Ice Removal — each with a dedicated hero photo, a paragraph description, a full sub-service list, and a "Call for a Quote" CTA
+- [ ] Every page on the site uses commercial contractor framing — no residential lawn service language ("yard", "lawn", "homeowner", etc.) appears anywhere in the visible copy
+- [ ] Every interactive element across the full site (nav links, gallery filter buttons, CTA buttons, lightbox controls, form inputs, mobile sticky CTA) presents a minimum 48px touch target verified on a 390px viewport
+- [ ] Loading the site with prefers-reduced-motion enabled produces no animated gallery grid reflows or card entrance animations — gallery filters still work but transitions are instant; all gallery filter buttons expose label and selected state via ARIA; lightbox traps focus while open and returns focus to the triggering card on close
+- [ ] A final codebase audit finds zero plain img tags and zero hardcoded legacy hex values remaining in any component or page file
 
 ---
 
@@ -81,12 +75,13 @@
 
 | Phase | Goal | Plans | Requirements | Status |
 |-------|------|-------|--------------|--------|
-| 1 - Rebrand Foundation | Site fully rebranded, forms live, seasonal bar active | 3 of 3 | BRAND-01..05, CONT-01..09, FORM-01..02, SEAS-01..02, MOBI-02 | Complete ✓ |
-| 2 - Gallery Feature | Filterable gallery with lightbox, wired into nav and homepage | 2 of 2 | GALL-01..06, LBOX-01..04, INTG-01..02, MOBI-03 | Pending |
-| 3 - Equipment Roster + Polish | Roster live, mobile hardened, accessibility complete | 2 of 2 | ROST-01..03, INTG-03, MOBI-01, MOBI-04..05 | Pending |
+| 4 - Dark Theme Overhaul + Homepage Rebuild | Dark site, rebuilt hero, service pillars, nav, trust signals, CTA banner | TBD | VSRL-01..05, NAV-01..02, HOME-01..03, HOME-06..07, CONV-01..05, CONT-03 | Pending |
+| 5 - Gallery + Equipment Roster | Gallery page with filters + lightbox, equipment roster, homepage preview, nav link | TBD | NAV-03, HOME-04..05, GALL-01..05, ROST-01..03 | Pending |
+| 6 - Services Deep Dive + Content + Polish | Services page rebuilt, about updated, full mobile + accessibility audit | TBD | SERV-01..03, CONT-01..02, MOBI-01..05 | Pending |
 
-**Coverage:** 37/37 v1 requirements mapped across 3 phases — no orphans.
+**Coverage:** 37/37 v1 requirements mapped across Phases 4–6 — no orphans.
 
 ---
-*Roadmap created: 2026-03-03*
-*Milestone: v2.0 Big Country Rebrand*
+*Roadmap created: 2026-03-04*
+*Milestone: v3.0 Industrial Redesign*
+*Supersedes: v2.0 Phases 2–3 (unbuilt, absorbed into v3.0)*
