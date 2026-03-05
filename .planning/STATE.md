@@ -2,26 +2,26 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-04)
+See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
-**Current focus:** Phase 5 - Gallery & Equipment (out-of-band: all 3 service pages built)
+**Current focus:** v3.1 Phase 5 - Global Foundation (mobile meta tags, globals.css, fluid typography base)
 
 ## Current Position
 
-Phase: 5 of 6 (Gallery & Equipment)
-Plan: 0 of TBD in current phase (out-of-band work completed: all 3 service deep-dive pages + homepage pillar slideshow)
-Status: Phase 4 complete. Out-of-band: /landscape-construction, /excavation, /snow-removal fully built in Alchemy-inspired editorial style. Header nav pointing to dedicated routes.
-Last activity: 2026-03-04 — ExcavationPage.tsx + SnowRemovalPage.tsx created; /excavation + /snow-removal routes wired; Header nav updated to /snow-removal + /excavation
+Phase: 5 of 9 (Global Foundation — v3.1 Mobile-First Polish)
+Plan: 0 of TBD in current phase
+Status: Phase 4 complete. v3.1 roadmap created. Ready to plan Phase 5.
+Last activity: 2026-03-05 — v3.1 roadmap written; all service pages pitch-ready as of 2026-03-04
 
-Progress: [████████..] ~50%
+Progress: [████......] ~40% (Phases 1 + 4 complete of 9 total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 10 (3 in Phase 1, 7 in Phase 4)
 - Average duration: ~8 min
-- Total execution time: ~0.60 hours
+- Total execution time: ~1.37 hours
 
 **By Phase:**
 
@@ -29,8 +29,11 @@ Progress: [████████..] ~50%
 |-------|-------|-------|----------|
 | 01-rebrand-foundation | 3/3 | ~27 min | ~9 min |
 | 04-dark-theme-homepage | 7/7 | ~55 min | ~8 min |
-| 05-gallery-equipment | 0/TBD | — | — |
-| 06-services-content-polish | 0/TBD | — | — |
+| 05-global-foundation | 0/TBD | — | — |
+| 06-navigation-layout | 0/TBD | — | — |
+| 07-homepage-mobile-polish | 0/TBD | — | — |
+| 08-service-pages-polish | 0/TBD | — | — |
+| 09-performance-animations | 0/TBD | — | — |
 
 *Updated after each plan completion*
 
@@ -96,20 +99,23 @@ Recent decisions affecting current work:
 - All services cards updated to use snow1.jpg — no more off-brand placeholder equipment shots on snow page (D-515)
 - Site committed and pitch-ready as of 2026-03-04 (D-516)
 
+- v3.1 is mobile-first polish — not a visual rebuild; work is auditing gaps, not rewriting components (D-601)
+- v3.0 Phases 5–6 (gallery, equipment, services deep dive) deferred; will be re-planned after v3.1 completes (D-602)
+
 ### Pending Todos
 
 - Add slideshow photos for Excavation pillar in ServicePillars.tsx (when client excavation site shots arrive)
 - Add slideshow photos for Snow & Ice Removal pillar in ServicePillars.tsx (when more snow photos arrive)
-- Phase 5 formal plans (gallery + equipment roster) — deferred, site pitched first
-- Phase 6 (services deep dive + polish) — deferred
+- Post-v3.1: plan gallery page (/gallery) — filterable grid + lightbox (deferred from v3.0)
+- Post-v3.1: plan Equipment Roster section on homepage (deferred from v3.0)
 
 ### Blockers/Concerns
 
-None blocking pitch. Excavation + Snow homepage pillar slideshows still use single photo — upgrade when more client photos arrive.
+None blocking Phase 5. All components are in place — Phase 5 is a targeted audit of layout.tsx and globals.css only.
 
 ## Session Continuity
 
-Last session: 2026-03-04
-Stopped at: Site pitch-ready — snow media integrated, all commits done
+Last session: 2026-03-05
+Stopped at: v3.1 roadmap created — ready to plan Phase 5
 Resume file: None
-Next action: After pitch, continue Phase 5 (gallery + equipment roster) or start new project via /gsd:new-project
+Next action: Run /gsd:plan-phase 5

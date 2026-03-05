@@ -1,151 +1,165 @@
-# Requirements: Big Country Landscaping & Maintenance Ltd — v3.0 Industrial Redesign
+# Requirements: Big Country Landscaping v3.1 — Mobile-First Presentation Polish
 
-**Defined:** 2026-03-04
+**Defined:** 2026-03-05
 **Core Value:** A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
+
+> **Milestone context:** v3.0 Phase 4 (dark theme + homepage) complete. v3.1 focuses on mobile experience quality — touch targets, fluid typography, no overflow, safe-area padding, form UX, and animation polish — to make the client demo on a phone spectacular.
+
+---
 
 ## v1 Requirements
 
-### Visual Design (VSRL)
+### Mobile Foundation (MFND)
 
-- [ ] **VSRL-01**: Visitor sees a dark near-black background (#0f1f2d or darker) as the dominant background on every page — no light or white content areas remain as the primary surface
-- [ ] **VSRL-02**: Hero section displays a full-bleed machine photo with a dark overlay, bold white headline (weight 800+), and a yellow (#F5A623) primary CTA button
-- [ ] **VSRL-03**: All headings across the site use Montserrat at weight 800 or 900 with tight letter-spacing — industrial, not soft
-- [ ] **VSRL-04**: Brand accent (#F5A623) is consistently used for CTAs, icon accents, numbered list markers, and hover states
-- [ ] **VSRL-05**: Section dividers and card borders use subtle dark-on-dark contrast — no bright white borders or soft rounded cards
+- [ ] **MFND-01**: Viewport meta tag in layout.tsx uses `width=device-width, initial-scale=1.0, maximum-scale=5.0`
+- [ ] **MFND-02**: theme-color meta tag set to `#0f1f2d` so browser chrome matches the dark site on mobile
+- [ ] **MFND-03**: `globals.css` body sets `touch-action: manipulation` to eliminate 300ms tap delay site-wide
+- [ ] **MFND-04**: `globals.css` sets `scroll-behavior: smooth` and `-webkit-tap-highlight-color: transparent` on root
+- [ ] **MFND-05**: `globals.css` base styles are structured mobile-first — base rules for 0–479px, min-width media queries scale up
 
-### Navigation (NAV)
+### Mobile Typography (MTYP)
 
-- [ ] **NAV-01**: Header is a dark sticky bar with logo left, max 6 nav links, phone number as a tappable tel: link, and a "Get a Quote" CTA button — always visible on scroll
-- [ ] **NAV-02**: Mobile menu opens as a full-screen dark overlay with large tap targets (min 48px) and the same phone CTA
-- [ ] **NAV-03**: Gallery link appears in both desktop nav and mobile menu
+- [ ] **MTYP-01**: Body text minimum font-size is 16px site-wide (prevents iOS auto-zoom when any input is focused)
+- [ ] **MTYP-02**: Body text line-height minimum 1.5 site-wide for readability on small screens
+- [ ] **MTYP-03**: Hero headings use `clamp()` for fluid scaling — minimum readable on 375px, maximum appropriate for desktop (e.g., `clamp(2.5rem, 8vw, 6rem)`)
+- [ ] **MTYP-04**: Section headings (h2) across all pages use `clamp()` fluid scaling — proportionally smaller on mobile
+- [ ] **MTYP-05**: All headings maintain Montserrat weight 800–900 and tight letter-spacing on mobile — no visual softening
 
-### Homepage Sections (HOME)
+### Mobile Layout (MLYT)
 
-- [ ] **HOME-01**: Hero section has a full-bleed machine photo background, company name, a bold one-liner headline, and two CTAs (Call Now + Get a Quote)
-- [ ] **HOME-02**: Two equal service pillar sections render side-by-side on desktop, stacked on mobile — one for Excavation & Site Work, one for Snow & Ice Removal — each with a dedicated photo and list of sub-services
-- [ ] **HOME-03**: A numbered "Why Big Country" section lists 4 trust reasons (01 24/7 Availability, 02 Licensed & Insured, 03 Commercial-Grade Equipment, 04 Alberta-Based) with the accent color on the numbers
-- [ ] **HOME-04**: Equipment Roster section renders on the homepage with a card for each key machine showing name, category, description, and a next/image photo slot
-- [ ] **HOME-05**: Gallery preview "See Our Work" section shows 3–6 sample project photos with a link through to /gallery
-- [ ] **HOME-06**: Testimonials section renders on a dark background with 3 client quotes and star ratings
-- [ ] **HOME-07**: A final CTA banner before the footer with a bold headline and phone/quote CTAs
+- [ ] **MLYT-01**: Zero horizontal scrolling on any page at 375px viewport width — verified with overflow-x audit
+- [ ] **MLYT-02**: All containers have minimum 16px–20px horizontal padding on mobile so content never touches screen edges
+- [ ] **MLYT-03**: No fixed-width elements (px-based width) wider than the mobile viewport remain in any component
+- [ ] **MLYT-04**: All desktop side-by-side layouts (service pillars, why cards, process steps, CTA splits) stack vertically on mobile
+- [ ] **MLYT-05**: Photo grids (services grid, why-cards) use CSS Grid with correct mobile column counts (1 col on mobile, 2 tablet, 3+ desktop)
 
-### Services (SERV)
+### Mobile Navigation (MNAV)
 
-- [ ] **SERV-01**: Services page has a dedicated Excavation & Site Work section with hero photo, description, and full sub-service list (site clearing, grading, trenching, demolition, foundation excavation, utility trenching)
-- [ ] **SERV-02**: Services page has a dedicated Snow & Ice Removal section with hero photo, description, and full sub-service list (commercial parking lots, sidewalk clearing, salting & sanding, snow hauling, seasonal contracts)
-- [ ] **SERV-03**: Each service section has its own CTA (Call for a Quote)
+- [ ] **MNAV-01**: Hamburger toggle button has minimum 44×44px tap target
+- [ ] **MNAV-02**: Each mobile nav link has minimum 44px height tap target with at least 8px gap between items
+- [ ] **MNAV-03**: Mobile menu opens/closes with smooth animation (slide-in or fade — no jarring instant swap)
+- [ ] **MNAV-04**: Header "Get a Quote" button and phone CTA maintain minimum 44px height on mobile
 
-### Gallery (GALL)
+### Mobile Images & Media (MIMG)
 
-- [ ] **GALL-01**: /gallery page shows a responsive grid (1 col mobile, 2 col tablet, 3 col desktop) of project photo cards
-- [ ] **GALL-02**: Filter buttons (All / Excavation / Snow Removal / Site Prep) animate the grid reflow — only matching cards visible; All restores full grid
-- [ ] **GALL-03**: Clicking a photo opens a full-screen lightbox with visible close, previous, and next controls
-- [ ] **GALL-04**: Lightbox supports swipe left/right on mobile and ESC/arrow keyboard nav on desktop
-- [ ] **GALL-05**: Selecting a filter category with no photos shows a clear empty-state message
+- [ ] **MIMG-01**: All `next/image` instances have correct `sizes` prop matching their actual rendered size at each breakpoint — no oversized image fetches
+- [ ] **MIMG-02**: Hero image uses `sizes="100vw"` with `priority` for LCP optimization
+- [ ] **MIMG-03**: All below-fold images use `loading="lazy"` (next/image default — verify no `priority` misuse)
+- [ ] **MIMG-04**: Service page photo grids have explicit `aspect-ratio` on containers to prevent layout shift during image load
+- [ ] **MIMG-05**: `<video>` elements (SnowRemovalPage) have `playsInline` attribute set for iOS autoplay compliance
 
-### Equipment Roster (ROST)
+### Mobile Buttons & Interactive (MBTN)
 
-- [ ] **ROST-01**: EquipmentItem TypeScript interface defined with: name, type, description, serviceCategory, imageSrc, imageAlt
-- [ ] **ROST-02**: src/lib/equipment-data.ts exports at least 4 machine entries (track loader, large excavator, mini excavator, and one more)
-- [ ] **ROST-03**: EquipmentRoster component renders cards with dark background, machine photo (next/image), name, type badge, and description
+- [ ] **MBTN-01**: Every CTA button, filter button, nav link, and interactive element has minimum 44×44px touch target at 375px viewport
+- [ ] **MBTN-02**: All buttons have minimum padding `py-3 px-6` (12px × 24px) — no undersized tap areas
+- [ ] **MBTN-03**: Adjacent clickable elements have minimum 8px gap to prevent mis-taps
+- [ ] **MBTN-04**: All interactive elements have visible `:active` / `active:` state — feedback on tap, not just hover
 
-### Trust & Conversion (CONV)
+### Mobile Forms (MFRM)
 
-- [ ] **CONV-01**: Phone number (587) 555-1234 is a tappable tel: link in the header, hero, footer, and mobile sticky CTA
-- [ ] **CONV-02**: "Licensed & Insured" and "WCB Alberta" trust badges are visible on the homepage
-- [ ] **CONV-03**: "24/7 Available" badge or callout is prominent — especially in the Snow Removal context
-- [ ] **CONV-04**: Hero quick-quote form and contact page form both show loading state then success confirmation on submit (UI state only — no real backend)
-- [ ] **CONV-05**: Mobile sticky CTA bar is always visible on phone screens
+- [ ] **MFRM-01**: All form inputs (hero quick-quote, contact form, service page CTA forms) are `w-full` on mobile
+- [ ] **MFRM-02**: All form inputs have minimum `text-base` (16px) font-size — prevents iOS auto-zoom on focus
+- [ ] **MFRM-03**: Phone number inputs use `type="tel"`, email inputs use `type="email"` — triggers correct mobile keyboards
+- [ ] **MFRM-04**: Form field labels are stacked above their inputs on mobile (not inline/side-by-side)
+- [ ] **MFRM-05**: Input fields have minimum `py-3` (12px) vertical padding for comfortable thumb interaction
 
-### Content (CONT)
+### Mobile Performance (MPERF)
 
-- [ ] **CONT-01**: All page copy uses commercial contractor framing — no residential lawn service language anywhere
-- [ ] **CONT-02**: About page tells Big Country's story with commercial focus (heavy equipment, Alberta operations, team experience)
-- [ ] **CONT-03**: Seasonal bar message reflects current season (spring excavation booking or winter snow contracts)
+- [ ] **MPERF-01**: `touch-action: manipulation` applied to all buttons and links (eliminates 300ms tap delay on elements that override the global rule)
+- [ ] **MPERF-02**: All CSS animations and transitions use only `transform` and `opacity` — no `width`, `height`, `top`, `left` transitions that trigger layout
+- [ ] **MPERF-03**: `will-change` not present on any element that is not actively animating — no blanket `will-change: transform` on static cards
 
-### Mobile & Accessibility (MOBI)
+### Mobile Animations (MANIM)
 
-- [ ] **MOBI-01**: Every interactive element across the full site (nav links, gallery filters, CTA buttons, lightbox controls, form inputs, mobile sticky CTA) has a minimum 48px touch target verified at 390px viewport
-- [ ] **MOBI-02**: Loading the site with prefers-reduced-motion enabled results in no animated gallery grid reflows or card entrance animations — filters still work but transitions are instant
-- [ ] **MOBI-03**: All gallery filter buttons expose label and selected state via ARIA; lightbox modal traps keyboard focus while open and returns focus to triggering card on close
-- [ ] **MOBI-04**: Zero plain `<img>` tags remain anywhere in the codebase — all images use next/image
-- [ ] **MOBI-05**: Zero hardcoded legacy hex values remain in any component or page file
+- [ ] **MANIM-01**: All Framer Motion animations (SeasonalBar, ServicePillars crossfade, any entrance animations) respect `useReducedMotion()` — reduced-motion users see instant transitions
+- [ ] **MANIM-02**: Testimonials slider and ServicePillars crossfade do not cause jank during momentum scroll on iOS
+- [ ] **MANIM-03**: Marquee animation (globals.css `.animate-marquee`) pauses or disables under `prefers-reduced-motion: reduce`
+
+### Mobile Enhancements (MENH)
+
+- [ ] **MENH-01**: MobileStickyCTA bottom bar uses `padding-bottom: env(safe-area-inset-bottom)` for notched iPhones
+- [ ] **MENH-02**: Fixed Header uses `padding-top: env(safe-area-inset-top)` for devices with tall status bars
+- [ ] **MENH-03**: Service page carousels/project showcases (LandscapeConstruction, Excavation, SnowRemoval) use CSS `scroll-snap-type` for native swipe feel on mobile
+- [ ] **MENH-04**: Any horizontally scrollable strip (marquee, thumbnail strip) is touch-scrollable with `-webkit-overflow-scrolling: touch`
+
+---
 
 ## v2 Requirements
 
-### Advanced Features
+### Future Mobile Features
 
-- **ADV-01**: Before/after photo slider for project transformations
-- **ADV-02**: Service area map showing coverage radius in Alberta
-- **ADV-03**: Seasonal pricing or quote request with service selection
-- **ADV-04**: Video background option for hero section
+- **MOB-V2-01**: PWA manifest + service worker for offline viewing of gallery
+- **MOB-V2-02**: Before/after photo swipe comparison slider
+- **MOB-V2-03**: Push notifications for booking confirmations (requires backend)
 
-### CMS / Content Management
-
-- **CMS-01**: Client can add/edit gallery photos through a simple admin interface
-- **CMS-02**: Client can update seasonal bar message without touching code
-- **CMS-03**: Equipment roster manageable without code changes
+---
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| CMS or image upload | Static codebase for v3.0 — complexity not justified yet |
-| Video content | Photos only; video adds hosting/performance complexity |
-| Online booking or payment | Lead gen via phone + form is sufficient |
-| Live Google Reviews integration | Static testimonials adequate, API adds complexity |
-| Blog or news section | Not requested, no content plan |
-| Multi-language (French) | Alberta market is English-first for this client |
+| Redesigning visual aesthetic | Keep dark industrial brand established in v3.0 — mobile-first is polish, not rebrand |
+| Gallery page (/gallery) | Deferred from v3.0 — v3.1 is mobile polish only; gallery is a separate feature build |
+| Equipment Roster section | Deferred from v3.0 — same rationale |
+| Backend/form submission | Static site, UI state only — out of scope per original PROJECT.md |
+| Native app (iOS/Android) | Web-first; native is v5+ if ever |
+| CSS framework change | Stay on Tailwind CSS v3 — no framework changes |
+
+---
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VSRL-01 | Phase 4 | Pending |
-| VSRL-02 | Phase 4 | Pending |
-| VSRL-03 | Phase 4 | Pending |
-| VSRL-04 | Phase 4 | Pending |
-| VSRL-05 | Phase 4 | Pending |
-| NAV-01 | Phase 4 | Pending |
-| NAV-02 | Phase 4 | Pending |
-| NAV-03 | Phase 5 | Pending |
-| HOME-01 | Phase 4 | Pending |
-| HOME-02 | Phase 4 | Pending |
-| HOME-03 | Phase 4 | Pending |
-| HOME-04 | Phase 5 | Pending |
-| HOME-05 | Phase 5 | Pending |
-| HOME-06 | Phase 4 | Pending |
-| HOME-07 | Phase 4 | Pending |
-| SERV-01 | Phase 6 | Pending |
-| SERV-02 | Phase 6 | Pending |
-| SERV-03 | Phase 6 | Pending |
-| GALL-01 | Phase 5 | Pending |
-| GALL-02 | Phase 5 | Pending |
-| GALL-03 | Phase 5 | Pending |
-| GALL-04 | Phase 5 | Pending |
-| GALL-05 | Phase 5 | Pending |
-| ROST-01 | Phase 5 | Pending |
-| ROST-02 | Phase 5 | Pending |
-| ROST-03 | Phase 5 | Pending |
-| CONV-01 | Phase 4 | Pending |
-| CONV-02 | Phase 4 | Pending |
-| CONV-03 | Phase 4 | Pending |
-| CONV-04 | Phase 4 | Pending |
-| CONV-05 | Phase 4 | Pending |
-| CONT-01 | Phase 6 | Pending |
-| CONT-02 | Phase 6 | Pending |
-| CONT-03 | Phase 4 | Pending |
-| MOBI-01 | Phase 6 | Pending |
-| MOBI-02 | Phase 6 | Pending |
-| MOBI-03 | Phase 6 | Pending |
-| MOBI-04 | Phase 6 | Pending |
-| MOBI-05 | Phase 6 | Pending |
+| MFND-01 | Phase 5 | Pending |
+| MFND-02 | Phase 5 | Pending |
+| MFND-03 | Phase 5 | Pending |
+| MFND-04 | Phase 5 | Pending |
+| MFND-05 | Phase 5 | Pending |
+| MTYP-01 | Phase 5 | Pending |
+| MTYP-02 | Phase 5 | Pending |
+| MTYP-03 | Phase 5 | Pending |
+| MTYP-04 | Phase 5 | Pending |
+| MTYP-05 | Phase 5 | Pending |
+| MPERF-01 | Phase 5 | Pending |
+| MLYT-01 | Phase 6 | Pending |
+| MLYT-02 | Phase 6 | Pending |
+| MLYT-03 | Phase 6 | Pending |
+| MLYT-04 | Phase 6 | Pending |
+| MLYT-05 | Phase 6 | Pending |
+| MNAV-01 | Phase 6 | Pending |
+| MNAV-02 | Phase 6 | Pending |
+| MNAV-03 | Phase 6 | Pending |
+| MNAV-04 | Phase 6 | Pending |
+| MBTN-01 | Phase 6 | Pending |
+| MBTN-02 | Phase 6 | Pending |
+| MBTN-03 | Phase 6 | Pending |
+| MBTN-04 | Phase 6 | Pending |
+| MIMG-01 | Phase 7 | Pending |
+| MIMG-02 | Phase 7 | Pending |
+| MIMG-03 | Phase 7 | Pending |
+| MIMG-04 | Phase 7 | Pending |
+| MIMG-05 | Phase 7 | Pending |
+| MENH-01 | Phase 7 | Pending |
+| MENH-02 | Phase 7 | Pending |
+| MFRM-01 | Phase 8 | Pending |
+| MFRM-02 | Phase 8 | Pending |
+| MFRM-03 | Phase 8 | Pending |
+| MFRM-04 | Phase 8 | Pending |
+| MFRM-05 | Phase 8 | Pending |
+| MENH-03 | Phase 8 | Pending |
+| MENH-04 | Phase 8 | Pending |
+| MPERF-02 | Phase 9 | Pending |
+| MPERF-03 | Phase 9 | Pending |
+| MANIM-01 | Phase 9 | Pending |
+| MANIM-02 | Phase 9 | Pending |
+| MANIM-03 | Phase 9 | Pending |
 
 **Coverage:**
-- v1 requirements: 37 total
-- Mapped to phases: 37
-- Unmapped: 0 ✓
+- v1 requirements: 43 total
+- Mapped to phases: 43
+- Unmapped: 0
 
 ---
-*Requirements defined: 2026-03-04*
-*Last updated: 2026-03-04 after v3.0 milestone start*
+*Requirements defined: 2026-03-05*
+*Last updated: 2026-03-05 — traceability confirmed after ROADMAP.md creation*

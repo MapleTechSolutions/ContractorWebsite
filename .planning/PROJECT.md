@@ -8,24 +8,22 @@ A heavy-equipment-forward contractor website for Big Country Landscaping & Maint
 
 A potential client sees the equipment, sees the work, and picks up the phone — the site converts on first impression.
 
-## Current Milestone: v3.0 Industrial Redesign
+## Current Milestone: v3.1 Mobile-First Presentation Polish
 
-**Goal:** Tear out the light/generic look and rebuild the site as a dark, machine-forward, conversion-focused contractor site — one that looks like it belongs alongside the best excavation and commercial snow removal companies in Alberta.
+**Goal:** Make every page of the site spectacular on a phone — fluid typography, 44px touch targets everywhere, no horizontal scroll, safe-area-inset padding for notched phones, smooth animations respecting reduced-motion, and forms that don't trigger iOS auto-zoom — so the client demo on a phone converts on first impression.
 
 **Target features:**
-- Hybrid dark/light alternating section layout — dark hero + CTA sections, clean white/light content sections (matches the clean modern logo, inspired by Alchemy Landscape's premium feel)
-- Hero rebuilt: full-bleed machine photo with dark overlay, bold white headline, burnt-orange CTA
-- Two equal service pillar sections on white background — Excavation & Site Work / Snow & Ice Removal
-- "Why Big Country" numbered trust section on dark navy panel (01–04, orange numbers)
-- Equipment Roster on light background — machines pop against clean backdrop
-- Portfolio gallery filterable by category, lightbox with swipe + keyboard nav
-- Gallery linked in nav and previewed on homepage (light section)
-- Testimonials on dark background with star ratings
-- Final CTA banner dark — urgency
-- Commercial-focused copy throughout
-- Mobile-first polish: 48px touch targets, reduced motion, ARIA
-- Trust badges: WCB Alberta, Licensed & Insured, 24/7 Available
-- Logo orange (#D4702A burnt orange) as the single accent color — matches actual logo
+- Viewport meta tag + theme-color for dark browser chrome
+- Fluid typography with clamp() — headings scale from mobile up, 16px min body
+- All layouts fluid (%, fr, vw) — no fixed widths that cause mobile overflow
+- 44×44px touch targets on every button, nav link, and interactive element
+- Hamburger menu with smooth animation, full-screen overlay, large tap targets
+- Forms: full-width, 16px inputs (no iOS auto-zoom), correct input types (tel, email)
+- touch-action: manipulation (removes 300ms tap delay) on all interactive elements
+- safe-area-inset padding on Header and MobileStickyCTA for notched iPhones
+- prefers-reduced-motion compliance on all carousels and entrance animations
+- No horizontal scrolling at any viewport width (375px and up)
+- Scroll-snap on service page carousels for swipe-feel navigation
 
 ## Requirements
 
@@ -106,5 +104,8 @@ A potential client sees the equipment, sees the work, and picks up the phone —
 | Equipment Roster as dedicated section | Excavation clients want to know the iron — it's a differentiator | ✓ Good |
 | Absorb v2.0 Phases 2–3 into v3.0 | Gallery + Equipment were unbuilt; redesign touches those components anyway | — Pending |
 
+| v3.0 Phases 5–6 absorbed into v3.1 | Gallery/Equipment/Accessibility deferred; mobile-first polish is higher priority for client demo | — Pending |
+| Mobile-first = polish over rebuild | Site is Next.js 14 + Tailwind v3 (already mobile-first conventions); work is auditing gaps, not rewrites | — Pending |
+
 ---
-*Last updated: 2026-03-04 after v3.0 milestone start — full visual redesign*
+*Last updated: 2026-03-05 after v3.1 milestone start — mobile-first presentation polish*
