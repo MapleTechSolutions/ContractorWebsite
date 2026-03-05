@@ -71,6 +71,17 @@ body {
   background: #d4921f;
 }
 
+/* Marquee animation */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+
 @layer components {
   /* Mobile-first button styles with proper touch targets (min 44px) */
   .btn-primary {

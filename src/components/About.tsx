@@ -63,24 +63,24 @@ export default function About() {
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0f1f2d] mb-5 md:mb-6 leading-tight">
               Your Commercial
-              <span className="text-[#F5A623]"> Partner in Alberta</span>
+              <span className="text-[#F5A623]"> Partner in Saskatchewan</span>
             </h2>
 
             <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed">
-              Big Country Landscaping &amp; Maintenance Ltd has been serving commercial clients across the Big Country region of Alberta for over 15 years. Our fleet of heavy equipment handles excavation, site prep, and commercial snow removal at scale.
+              Big Country Landscaping &amp; Maintenance Ltd has been serving commercial clients across Saskatoon and surrounding Saskatchewan communities for over 15 years. Our fleet of heavy equipment handles excavation, landscaping, site prep, and commercial snow removal at scale.
             </p>
 
             <p className="text-gray-600 mb-8 md:mb-10 leading-relaxed text-sm md:text-base">
-              We hold WCB Alberta registration, full commercial liability insurance, and Alberta One-Call certification on every job. Our operators know the land, the regulations, and what it takes to keep a commercial site moving.
+              We hold WCB Saskatchewan registration, full commercial liability insurance, and SK First Call certification on every job. Our operators know the land, the regulations, and what it takes to keep a commercial site moving.
             </p>
 
             {/* Features grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5 mb-8 md:mb-10">
               {[
-                { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", title: "WCB Alberta Registered", desc: "All crews registered and compliant" },
+                { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", title: "WCB Saskatchewan Registered", desc: "All crews registered and compliant" },
                 { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", title: "Fully Insured", desc: "Commercial liability coverage on every project" },
-                { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", title: "Big Country Region", desc: "Serving Alberta's Big Country communities" },
-                { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", title: "Alberta One-Call Certified", desc: "Utility safety on every excavation site" },
+                { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", title: "Saskatoon & Area", desc: "Serving Saskatoon and surrounding SK communities" },
+                { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", title: "SK First Call Certified", desc: "Utility safety on every excavation site" },
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm">
                   <div className="w-10 h-10 md:w-11 md:h-11 rounded-lg md:rounded-xl bg-[#0f1f2d] flex items-center justify-center flex-shrink-0">

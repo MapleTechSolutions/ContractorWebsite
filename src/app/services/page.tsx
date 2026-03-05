@@ -4,8 +4,8 @@ import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Excavation & Snow Removal Services | Big Country Landscaping",
-  description: "Commercial excavation (site clearing, grading, trenching, demolition) and snow removal (lot clearing, salting, hauling, 24/7 response) in Big Country, Alberta.",
-  keywords: ["excavation services Alberta", "commercial snow removal Alberta", "site clearing", "utility trenching", "snow hauling Big Country"],
+  description: "Commercial excavation (site clearing, grading, trenching, demolition), snow removal (lot clearing, salting, hauling, 24/7 response), and landscaping in Saskatoon and surrounding areas.",
+  keywords: ["excavation services Saskatoon", "commercial snow removal Saskatoon", "landscaping Saskatoon", "site clearing Saskatchewan", "utility trenching Saskatoon"],
 };
 
 export default function ServicesPage() {
@@ -25,7 +25,7 @@ export default function ServicesPage() {
               <span className="text-[#F5A623]"> Services</span>
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Excavation and commercial snow removal for development sites and commercial properties across Big Country, Alberta.
+              Excavation, snow removal, and landscaping for development sites and commercial properties across Saskatoon and surrounding Saskatchewan areas.
             </p>
           </div>
         </div>

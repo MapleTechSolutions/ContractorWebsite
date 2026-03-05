@@ -22,11 +22,11 @@ export default function Hero() {
         alt=""
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-center opacity-40"
         sizes="100vw"
       />
       {/* Dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-[#0f1f2d]/70" />
+      <div className="absolute inset-0 bg-[#0f1f2d]/80" />
       {/* Subtle gradient for bottom legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f2d]/40 to-transparent" />
       {/* Grid pattern overlay */}
@@ -51,7 +51,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-white/70 mb-8 md:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Commercial excavation and snow removal across Big Country, Alberta. Licensed, insured, and WCB compliant — ready when you need us.
+              Commercial excavation, snow removal, and landscaping across Saskatoon and surrounding areas. Licensed, insured, and WCB compliant — ready when you need us.
             </p>
 
             {/* CTA Buttons - Stack on mobile */}
@@ -82,7 +82,7 @@ export default function Hero() {
                 <svg className="w-4 h-4 text-[#F5A623] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-xs font-semibold text-white/90 whitespace-nowrap">WCB Alberta</span>
+                <span className="text-xs font-semibold text-white/90 whitespace-nowrap">WCB Saskatchewan</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 border border-white/10 px-3 py-2 rounded-lg">
                 <svg className="w-4 h-4 text-[#F5A623] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function Hero() {
           <div className="hidden lg:block">
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Get Your Free Estimate</h3>
+                <h3 className="text-2xl font-black tracking-tight text-white mb-2">Get Your Free Estimate</h3>
                 <p className="text-white/60">We&apos;ll get back to you within one business day.</p>
               </div>
 
@@ -109,7 +109,7 @@ export default function Hero() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">Request Received</h3>
+                    <h3 className="text-xl font-black tracking-tight text-white mb-2">Request Received</h3>
                     <p className="text-white/70 text-sm">We&apos;ll be in touch within one business day.</p>
                   </div>
                 ) : (
@@ -211,7 +211,7 @@ export default function Hero() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">Request Received</h3>
+                      <h3 className="text-xl font-black tracking-tight text-white mb-2">Request Received</h3>
                       <p className="text-white/70 text-sm">We&apos;ll be in touch within one business day.</p>
                     </div>
                   ) : (
@@ -279,8 +279,8 @@ export default function Hero() {
               <div className="text-white/50 font-medium uppercase text-[10px] sm:text-xs tracking-wider">Snow Response</div>
             </div>
             <div className="group p-3 md:p-0">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 md:mb-2 group-hover:text-[#F5A623] transition-colors">Alberta</div>
-              <div className="text-white/50 font-medium uppercase text-[10px] sm:text-xs tracking-wider">One-Call</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 md:mb-2 group-hover:text-[#F5A623] transition-colors">SK</div>
+              <div className="text-white/50 font-medium uppercase text-[10px] sm:text-xs tracking-wider">First Call</div>
             </div>
           </div>
         </div>

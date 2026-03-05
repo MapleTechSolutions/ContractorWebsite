@@ -36,7 +36,7 @@ export default function ServicesPreview() {
             Excavation &amp; <span className="text-[#F5A623]">Snow Removal</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Heavy equipment solutions for commercial and industrial sites across Big Country, Alberta.
+            Heavy equipment solutions for commercial and industrial sites across Saskatoon and surrounding areas.
           </p>
         </div>
 

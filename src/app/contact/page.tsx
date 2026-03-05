@@ -3,8 +3,8 @@ import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
   title: "Get a Site Estimate | Big Country Landscaping & Maintenance Ltd",
-  description: "Request a free site estimate for excavation or commercial snow removal in Big Country, Alberta. Call (587) 555-1234 or fill out our form.",
-  keywords: ["excavation estimate Alberta", "snow removal quote", "Big Country contractor", "free site estimate"],
+  description: "Request a free site estimate for excavation, snow removal, or landscaping in Saskatoon and surrounding areas. Call (587) 555-1234 or fill out our form.",
+  keywords: ["excavation estimate Saskatoon", "snow removal quote Saskatoon", "landscaping quote Saskatoon", "free site estimate Saskatchewan"],
 };
 
 export default function ContactPage() {
@@ -24,7 +24,7 @@ export default function ContactPage() {
               <span className="text-[#F5A623]"> Site Estimate</span>
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Ready to start? Contact Big Country Landscaping for excavation or snow removal in the Big Country region of Alberta.
+              Ready to start? Contact Big Country Landscaping for excavation, snow removal, or landscaping across Saskatoon and surrounding areas.
             </p>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function ContactPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <p className="text-[#0f1f2d] font-bold text-lg">Serving Big Country Region, Alberta</p>
-              <p className="text-gray-500 text-sm">Drumheller, Hanna, Stettler, and surrounding communities</p>
+              <p className="text-[#0f1f2d] font-bold text-lg">Serving Saskatoon &amp; Surrounding Areas</p>
+              <p className="text-gray-500 text-sm">Saskatoon, Warman, Martensville, Langham, and surrounding communities</p>
             </div>
           </div>
         </div>

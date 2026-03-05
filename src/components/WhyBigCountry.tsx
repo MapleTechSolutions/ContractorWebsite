@@ -10,7 +10,7 @@ export default function WhyBigCountry() {
       number: "02",
       title: "Licensed & Insured",
       description:
-        "Fully licensed contractor, WCB Alberta registered, and carrying commercial liability insurance. Your site liability is covered from day one.",
+        "Fully licensed contractor, WCB Saskatchewan registered, and carrying commercial liability insurance. Your site liability is covered from day one.",
     },
     {
       number: "03",
@@ -20,9 +20,9 @@ export default function WhyBigCountry() {
     },
     {
       number: "04",
-      title: "Alberta-Based",
+      title: "Saskatchewan-Based",
       description:
-        "We operate in Big Country, Alberta. We know the land, the regulations, and Alberta One-Call requirements. No out-of-province crews.",
+        "We operate in Saskatoon and surrounding Saskatchewan communities. We know the land, the regulations, and SK First Call requirements. No out-of-province crews.",
     },
   ];
 

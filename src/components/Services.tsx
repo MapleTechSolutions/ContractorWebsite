@@ -59,7 +59,7 @@ export default function Services() {
             <span className="text-[#F5A623]"> Do</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Excavation and commercial snow removal for the Big Country region of Alberta. Licensed, insured, WCB compliant.
+            Excavation, snow removal, and landscaping for Saskatoon and surrounding Saskatchewan communities. Licensed, insured, WCB compliant.
           </p>
         </div>
 

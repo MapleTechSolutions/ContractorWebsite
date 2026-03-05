@@ -1,19 +1,17 @@
 import Hero from "@/components/Hero";
-import ServicesPreview from "@/components/ServicesPreview";
-import AboutPreview from "@/components/AboutPreview";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import TestimonialsPreview from "@/components/TestimonialsPreview";
-import CTASection from "@/components/CTASection";
+import ServicePillars from "@/components/ServicePillars";
+import WhyBigCountry from "@/components/WhyBigCountry";
+import Testimonials from "@/components/Testimonials";
+import CTABanner from "@/components/CTABanner";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesPreview />
-      <AboutPreview />
-      <WhyChooseUs />
-      <TestimonialsPreview />
-      <CTASection />
+      <ServicePillars />
+      <WhyBigCountry />
+      <Testimonials />
+      <CTABanner />
     </>
   );
 }

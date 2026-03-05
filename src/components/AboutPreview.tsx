@@ -40,19 +40,19 @@ export default function AboutPreview() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Big Country Landscaping &amp; Maintenance Ltd has been serving commercial clients across the Big Country region of Alberta for over 15 years. Our fleet of heavy equipment handles excavation, site prep, and commercial snow removal at scale.
+              Big Country Landscaping &amp; Maintenance Ltd has been serving commercial clients across Saskatoon and surrounding Saskatchewan communities for over 15 years. Our fleet of heavy equipment handles excavation, site prep, landscaping, and commercial snow removal at scale.
             </p>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              We work directly with property managers, developers, and site superintendents. WCB Alberta registered, fully insured, and Alberta One-Call compliant on every project.
+              We work directly with property managers, developers, and site superintendents. WCB Saskatchewan registered, fully insured, and SK First Call compliant on every project.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
-                { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "WCB Alberta Registered" },
+                { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "WCB Saskatchewan Registered" },
                 { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", text: "Fully Insured" },
-                { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", text: "Big Country Region, AB" },
-                { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", text: "Alberta One-Call Certified" },
+                { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", text: "Saskatoon & Area, SK" },
+                { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", text: "SK First Call Certified" },
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3 group">
                   <div className="w-10 h-10 rounded-xl bg-[#0f1f2d] flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5A623] transition-colors">

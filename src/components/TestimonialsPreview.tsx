@@ -22,7 +22,7 @@ const testimonials = [
   {
     name: "Tyler J.",
     location: "Development Manager — Foothills Land Corp",
-    text: "We've used Big Country for three utility trench projects across two counties. They know Alberta One-Call compliance inside out. No delays, no damage claims. We keep calling them back.",
+    text: "We've used Big Country for three utility trench projects across two counties. They know SK First Call compliance inside out. No delays, no damage claims. We keep calling them back.",
     rating: 5,
   },
 ];
@@ -48,7 +48,7 @@ export default function TestimonialsPreview() {
             <span className="text-[#F5A623]"> Clients Say</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Property managers, developers, and operations teams across Big Country, Alberta.
+            Property managers, developers, and operations teams across Saskatoon and surrounding areas.
           </p>
         </div>
 

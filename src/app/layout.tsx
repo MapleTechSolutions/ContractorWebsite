@@ -28,8 +28,9 @@ export const metadata: Metadata = {
     default: 'Big Country Landscaping & Maintenance Ltd | Excavation & Snow Removal',
     template: '%s | Big Country Landscaping',
   },
-  description: 'Commercial excavation and snow removal across Big Country, Alberta. Licensed, insured, and WCB compliant. 15+ years serving commercial clients. Get a free site estimate.',
-  keywords: ['excavation Alberta', 'snow removal Alberta', 'commercial excavation', 'Big Country Alberta', 'site clearing', 'snow hauling', 'WCB compliant contractor', 'Alberta One-Call'],
+  description: 'Commercial excavation, snow removal, and landscaping across Saskatoon and surrounding Saskatchewan areas. Licensed, insured, and WCB compliant. 15+ years serving commercial clients. Get a free site estimate.',
+  keywords: ['excavation Saskatoon', 'snow removal Saskatoon', 'landscaping Saskatoon', 'commercial excavation Saskatchewan', 'site clearing Saskatoon', 'snow hauling', 'WCB compliant contractor', 'SK First Call'],
+
   authors: [{ name: 'Big Country Landscaping & Maintenance Ltd' }],
   creator: 'Big Country Landscaping & Maintenance Ltd',
   publisher: 'Big Country Landscaping & Maintenance Ltd',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://bigcountrylandscaping.ca',
     siteName: 'Big Country Landscaping & Maintenance Ltd',
     title: 'Big Country Landscaping & Maintenance Ltd | Excavation & Snow Removal',
-    description: 'Commercial excavation and snow removal across Big Country, Alberta. Licensed, insured, WCB compliant.',
+    description: 'Commercial excavation, snow removal, and landscaping across Saskatoon & surrounding areas. Licensed, insured, WCB compliant.',
     images: [
       {
         url: '/og-image.jpg',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Big Country Landscaping & Maintenance Ltd',
-    description: 'Commercial excavation and snow removal across Big Country, Alberta.',
+    description: 'Commercial excavation, snow removal, and landscaping across Saskatoon & surrounding Saskatchewan areas.',
     images: ['/og-image.jpg'],
   },
   robots: {

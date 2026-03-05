@@ -28,7 +28,7 @@ export default function Footer() {
                 </div>
               </Link>
               <p className="text-gray-400 mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                Big Country Landscaping &amp; Maintenance Ltd has been serving commercial and industrial clients across the Big Country region of Alberta for over 15 years.
+                Big Country Landscaping &amp; Maintenance Ltd has been serving commercial and industrial clients across Saskatoon and surrounding Saskatchewan communities for over 15 years.
               </p>
               <div className="flex gap-2 md:gap-3">
                 {["facebook", "instagram", "google"].map((social) => (
@@ -60,11 +60,12 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-base md:text-lg font-bold mb-4 md:mb-6">Quick Links</h4>
+              <h4 className="text-base md:text-lg font-black tracking-tight mb-4 md:mb-6">Quick Links</h4>
               <ul className="space-y-2 md:space-y-3">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/services", label: "Services" },
+                  { href: "/landscape-construction", label: "Landscape Construction" },
                   { href: "/about", label: "About Us" },
                   { href: "/reviews", label: "Reviews" },
                   { href: "/contact", label: "Contact" },
@@ -83,25 +84,31 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-base md:text-lg font-bold mb-4 md:mb-6">Our Services</h4>
+              <h4 className="text-base md:text-lg font-black tracking-tight mb-4 md:mb-6">Our Services</h4>
               <ul className="space-y-2 md:space-y-3">
-                {["Excavation", "Snow Removal", "Site Clearing", "Rough Grading", "Utility Trenching"].map((service) => (
-                  <li key={service}>
-                    <Link href="/services" className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
+                {[
+                  { label: "Excavation", href: "/services" },
+                  { label: "Snow Removal", href: "/services" },
+                  { label: "Hardscaping", href: "/landscape-construction" },
+                  { label: "Softscaping", href: "/landscape-construction" },
+                  { label: "Irrigation Systems", href: "/landscape-construction" },
+                ].map((service) => (
+                  <li key={service.label}>
+                    <Link href={service.href} className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
                       <svg className="w-3 h-3 md:w-4 md:h-4 text-[#F5A623] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                      {service}
+                      {service.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <p className="text-white/50 text-sm mt-4">Serving Big Country region, Alberta</p>
+              <p className="text-white/50 text-sm mt-4">Serving Saskatoon &amp; Surrounding Areas</p>
             </div>
 
             {/* Contact */}
             <div className="col-span-2 md:col-span-1">
-              <h4 className="text-base md:text-lg font-bold mb-4 md:mb-6">Contact</h4>
+              <h4 className="text-base md:text-lg font-black tracking-tight mb-4 md:mb-6">Contact</h4>
               <ul className="space-y-3 md:space-y-4">
                 <li>
                   <a href="tel:+15875551234" className="flex items-center gap-3 text-gray-400 active:text-[#F5A623] transition-colors touch-manipulation">

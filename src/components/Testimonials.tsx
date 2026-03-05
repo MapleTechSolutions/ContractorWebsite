@@ -6,7 +6,7 @@ const testimonials = [
   {
     id: 1,
     name: "Dave K.",
-    location: "Strathmore Commercial Properties",
+    location: "Saskatoon Commercial Properties",
     rating: 5,
     text: "Big Country handled our full site clearing and rough grading over three phases. A professional crew — showed up when they said they would, zero surprises on the invoice, and the site was ready for our contractor two days early.",
     service: "Excavation",
@@ -22,7 +22,7 @@ const testimonials = [
   {
     id: 3,
     name: "Carla B.",
-    location: "Drumheller Mall",
+    location: "Midtown Plaza, Saskatoon",
     rating: 5,
     text: "After our previous contractor bailed mid-season we called Big Country. They had equipment on-site the next morning. The work was clean, the team was professional, and they've had our contract ever since.",
     service: "Snow Removal",
@@ -30,9 +30,9 @@ const testimonials = [
   {
     id: 4,
     name: "Tyler J.",
-    location: "Foothills Land Corp",
+    location: "Prairie Land Corp, SK",
     rating: 5,
-    text: "Big Country did the utility trenching and backfill on a tight residential development timeline. They coordinated with Alberta One-Call, kept the site tidy, and I never had to chase them for updates. Exactly what you want on a fast-moving project.",
+    text: "Big Country did the utility trenching and backfill on a tight residential development timeline. They coordinated with SK First Call, kept the site tidy, and I never had to chase them for updates. Exactly what you want on a fast-moving project.",
     service: "Excavation",
   },
 ];
@@ -66,12 +66,12 @@ export default function Testimonials() {
             </svg>
             Reviews
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 md:mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-4 md:mb-5">
             What Commercial
             <span className="text-[#F5A623]"> Clients Say</span>
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our commercial clients across Big Country, Alberta have to say.
+            Don&apos;t just take our word for it. Here&apos;s what our commercial clients across Saskatoon and surrounding areas have to say.
           </p>
         </div>
 

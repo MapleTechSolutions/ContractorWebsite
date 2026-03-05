@@ -4,8 +4,8 @@ import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Client Reviews | Big Country Landscaping & Maintenance Ltd",
-  description: "Read what commercial clients say about Big Country Landscaping. Property managers, developers, and operations teams across Alberta.",
-  keywords: ["Big Country Landscaping reviews", "excavation contractor reviews Alberta", "commercial snow removal reviews"],
+  description: "Read what commercial clients say about Big Country Landscaping. Property managers, developers, and operations teams across Saskatoon and Saskatchewan.",
+  keywords: ["Big Country Landscaping reviews", "excavation contractor reviews Saskatoon", "commercial snow removal reviews Saskatchewan"],
 };
 
 export default function ReviewsPage() {
@@ -32,7 +32,7 @@ export default function ReviewsPage() {
               <span className="text-[#F5A623]"> Reviews</span>
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Commercial clients across Big Country, Alberta. Property managers, site superintendents, and developers.
+              Commercial clients across Saskatoon and surrounding areas. Property managers, site superintendents, and developers.
             </p>
           </div>
         </div>

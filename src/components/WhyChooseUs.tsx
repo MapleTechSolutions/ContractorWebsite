@@ -4,13 +4,13 @@ export default function WhyChooseUs() {
   const reasons = [
     {
       number: "01",
-      title: "WCB Alberta Compliant",
-      description: "All crews are WCB Alberta registered and compliant. Your site liability is fully covered.",
+      title: "WCB Saskatchewan Compliant",
+      description: "All crews are WCB Saskatchewan registered and compliant. Your site liability is fully covered.",
     },
     {
       number: "02",
-      title: "Alberta One-Call Certified",
-      description: "We notify Alberta One-Call before every dig. Utility safety is non-negotiable on our sites.",
+      title: "SK First Call Certified",
+      description: "We notify SK First Call before every dig. Utility safety is non-negotiable on our sites.",
     },
     {
       number: "03",

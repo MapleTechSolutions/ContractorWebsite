@@ -5,8 +5,8 @@ import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "About Big Country Landscaping & Maintenance Ltd",
-  description: "Commercial excavation and snow removal company serving Big Country, Alberta for 15+ years. WCB Alberta registered, fully insured, Alberta One-Call certified.",
-  keywords: ["Big Country Landscaping", "Alberta excavation company", "commercial contractor Alberta", "WCB Alberta contractor"],
+  description: "Commercial excavation, snow removal, and landscaping company serving Saskatoon and surrounding areas for 15+ years. WCB Saskatchewan registered, fully insured, SK First Call certified.",
+  keywords: ["Big Country Landscaping Saskatoon", "excavation company Saskatoon", "commercial contractor Saskatchewan", "WCB Saskatchewan contractor"],
 };
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
               <span className="text-[#F5A623]"> Big Country</span>
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Commercial excavation and snow removal across the Big Country region of Alberta — heavy equipment, reliable service, 15+ years.
+              Commercial excavation, snow removal, and landscaping across Saskatoon and surrounding Saskatchewan — heavy equipment, reliable service, 15+ years.
             </p>
           </div>
         </div>
