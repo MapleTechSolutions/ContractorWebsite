@@ -48,6 +48,13 @@ Plans:
 
 ## Phase 5: Gallery + Equipment Roster
 
+**Out-of-band work completed (2026-03-04):**
+- `/landscape-construction` page fully rebuilt — Alchemy-inspired editorial layout with cinematic hero, photo services grid, auto-advancing project showcase (7 yard-work photos), why-cards, process, testimonials, split CTA form
+- `ServicePillars` landscaping pillar → 7-photo auto-advancing crossfade slideshow (2s, amber dot indicator, per-slide category label)
+- 7 client yard-work photos added to `public/images/` (yard-work-0..6.jpg)
+- `globals.css` marquee animation added
+- **Pending:** Excavation pillar slideshow (need excavation photos) + Snow pillar slideshow (need snow photos)
+
 **Goal:** Visitors can browse real project photos on a dedicated gallery page with category filters and full-screen lightbox navigation, an Equipment Roster section on the homepage shows key machines with photo slots, a gallery preview section appears on the homepage, and Gallery is wired into both the desktop nav and mobile menu.
 
 **Dependencies:** Phase 4 must be complete — gallery and roster components inherit the dark theme established in Phase 4, and the Gallery nav link extends the Phase 4 header redesign.
@@ -86,8 +93,8 @@ Plans:
 
 | Phase | Goal | Plans | Requirements | Status |
 |-------|------|-------|--------------|--------|
-| 4 - Dark Theme Overhaul + Homepage Rebuild | Dark site, rebuilt hero, service pillars, nav, trust signals, CTA banner | 7 plans | VSRL-01..05, NAV-01..02, HOME-01..03, HOME-06..07, CONV-01..05, CONT-03 | Planned |
-| 5 - Gallery + Equipment Roster | Gallery page with filters + lightbox, equipment roster, homepage preview, nav link | TBD | NAV-03, HOME-04..05, GALL-01..05, ROST-01..03 | Pending |
+| 4 - Dark Theme Overhaul + Homepage Rebuild | Dark site, rebuilt hero, service pillars, nav, trust signals, CTA banner | 7 plans | VSRL-01..05, NAV-01..02, HOME-01..03, HOME-06..07, CONV-01..05, CONT-03 | Complete ✓ |
+| 5 - Gallery + Equipment Roster | Gallery page with filters + lightbox, equipment roster, homepage preview, nav link | TBD | NAV-03, HOME-04..05, GALL-01..05, ROST-01..03 | In Progress |
 | 6 - Services Deep Dive + Content + Polish | Services page rebuilt, about updated, full mobile + accessibility audit | TBD | SERV-01..03, CONT-01..02, MOBI-01..05 | Pending |
 
 **Coverage:** 37/37 v1 requirements mapped across Phases 4–6 — no orphans.
