@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -51,24 +50,13 @@ export default function Header() {
         <div className="container-custom">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 md:gap-3 group z-50">
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden flex-shrink-0">
-                <Image
-                  src="/logo.svg"
-                  alt="Big Country Landscaping & Maintenance Ltd"
-                  width={48}
-                  height={48}
-                  className="w-full h-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 text-white">
-                  Big Country Landscaping
-                </span>
-                <span className="text-[8px] md:text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300 text-[#F5A623]">
-                  Excavation & Snow Removal
-                </span>
-              </div>
+            <Link href="/" className="flex flex-col z-50">
+              <span className="text-lg md:text-xl font-black tracking-tight text-white leading-tight">
+                Big Country Landscaping
+              </span>
+              <span className="text-[8px] md:text-[10px] font-semibold tracking-widest uppercase text-[#F5A623]">
+                Excavation & Snow Removal
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
