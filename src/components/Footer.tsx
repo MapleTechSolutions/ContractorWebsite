@@ -35,7 +35,7 @@ export default function Footer() {
                   <a
                     key={social}
                     href="#"
-                    className="w-10 h-10 md:w-10 md:h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center active:bg-[#F5A623] active:border-[#F5A623] active:text-[#0f1f2d] transition-all duration-200 touch-manipulation"
+                    className="min-w-[44px] min-h-[44px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center active:bg-[#F5A623] active:border-[#F5A623] active:text-[#0f1f2d] transition-all duration-200 touch-manipulation"
                     aria-label={social}
                   >
                     {social === "facebook" && (
@@ -71,7 +71,7 @@ export default function Footer() {
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
+                    <Link href={link.href} className="text-gray-400 hover:text-[#F5A623] active:text-[#F5A623] transition-colors flex items-center gap-2 group py-2 touch-manipulation text-sm md:text-base">
                       <svg className="w-3 h-3 md:w-4 md:h-4 text-[#F5A623] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -94,7 +94,7 @@ export default function Footer() {
                   { label: "Irrigation Systems", href: "/landscape-construction" },
                 ].map((service) => (
                   <li key={service.label}>
-                    <Link href={service.href} className="text-gray-400 active:text-[#F5A623] transition-colors flex items-center gap-2 group py-1 touch-manipulation text-sm md:text-base">
+                    <Link href={service.href} className="text-gray-400 hover:text-[#F5A623] active:text-[#F5A623] transition-colors flex items-center gap-2 group py-2 touch-manipulation text-sm md:text-base">
                       <svg className="w-3 h-3 md:w-4 md:h-4 text-[#F5A623] opacity-0 group-active:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

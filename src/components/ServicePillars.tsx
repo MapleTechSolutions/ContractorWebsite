@@ -39,7 +39,7 @@ export default function ServicePillars() {
           <div className="inline-flex items-center gap-2 bg-white/10 text-[#F5A623] px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Our Services
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-[clamp(1.5rem,5vw,3rem)] font-black text-white tracking-tight">
             Built for <span className="text-[#F5A623]">Commercial Scale</span>
           </h2>
         </div>
@@ -48,7 +48,7 @@ export default function ServicePillars() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* Pillar: Excavation */}
-          <div className="relative rounded-2xl overflow-hidden min-h-[420px] md:min-h-[560px]">
+          <div className="relative rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[420px] md:min-h-[560px]">
             <Image
               src="/images/excavation-pillar.jpg"
               alt="Commercial excavation services"
@@ -58,7 +58,7 @@ export default function ServicePillars() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f2d]/95 via-[#0f1f2d]/50 to-[#0f1f2d]/20" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-              <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
+              <h3 className="text-[clamp(1.25rem,4vw,1.875rem)] font-black text-white tracking-tight mb-3">
                 Excavation &amp; Site Work
               </h3>
               <ul className="space-y-1.5 mb-5">
@@ -75,14 +75,14 @@ export default function ServicePillars() {
                   </li>
                 ))}
               </ul>
-              <Link href="/services" className="btn-primary w-fit text-sm">
+              <Link href="/excavation" className="btn-primary w-fit text-sm touch-manipulation">
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Pillar: Snow Removal */}
-          <div className="relative rounded-2xl overflow-hidden min-h-[420px] md:min-h-[560px]">
+          <div className="relative rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[420px] md:min-h-[560px]">
             <Image
               src="/images/snow-pillar.jpg"
               alt="Commercial snow removal services"
@@ -95,7 +95,7 @@ export default function ServicePillars() {
               <div className="inline-flex items-center gap-2 bg-[#F5A623] text-[#0f1f2d] px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3 w-fit">
                 24/7 Storm Response
               </div>
-              <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
+              <h3 className="text-[clamp(1.25rem,4vw,1.875rem)] font-black text-white tracking-tight mb-3">
                 Snow &amp; Ice Removal
               </h3>
               <ul className="space-y-1.5 mb-5">
@@ -112,14 +112,14 @@ export default function ServicePillars() {
                   </li>
                 ))}
               </ul>
-              <Link href="/services" className="btn-primary w-fit text-sm">
+              <Link href="/snow-removal" className="btn-primary w-fit text-sm touch-manipulation">
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Pillar: Landscaping & Construction — auto-changing slideshow */}
-          <div className="relative rounded-2xl overflow-hidden min-h-[420px] md:min-h-[560px] md:col-span-2 lg:col-span-1">
+          <div className="relative rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[420px] md:min-h-[560px] md:col-span-2 lg:col-span-1">
             {/* Stacked images — crossfade */}
             {LANDSCAPE_SLIDES.map((src, i) => (
               <div
@@ -172,7 +172,7 @@ export default function ServicePillars() {
                   ][slide]}
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
+              <h3 className="text-[clamp(1.25rem,4vw,1.875rem)] font-black text-white tracking-tight mb-3">
                 Landscaping &amp; Construction
               </h3>
               <ul className="space-y-1.5 mb-5">
@@ -189,7 +189,7 @@ export default function ServicePillars() {
                   </li>
                 ))}
               </ul>
-              <Link href="/landscape-construction" className="btn-primary w-fit text-sm">
+              <Link href="/landscape-construction" className="btn-primary w-fit text-sm touch-manipulation">
                 See Our Work
               </Link>
             </div>

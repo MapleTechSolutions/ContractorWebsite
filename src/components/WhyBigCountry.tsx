@@ -37,7 +37,7 @@ export default function WhyBigCountry() {
           <div className="inline-flex items-center gap-2 bg-white/10 text-[#F5A623] px-4 md:px-5 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6">
             Why Big Country
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">
+          <h2 className="text-[clamp(1.5rem,5vw,3rem)] font-black text-white tracking-tight mb-4">
             The Big Country
             <span className="text-[#F5A623]"> Difference</span>
           </h2>
@@ -53,7 +53,7 @@ export default function WhyBigCountry() {
               key={reason.number}
               className="p-6 md:p-8 bg-white/5 border border-white/10 rounded-xl"
             >
-              <div className="text-4xl md:text-5xl font-black text-[#F5A623] mb-3">
+              <div className="text-[clamp(2rem,6vw,3.5rem)] font-black text-[#F5A623] mb-3">
                 {reason.number}
               </div>
               <h3 className="text-base md:text-lg font-black text-white mb-2 leading-tight">

@@ -35,12 +35,16 @@ html {
 
 body {
   font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   color: #ffffff;
   background: #0f1f2d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Prevent horizontal scroll on mobile */
   overflow-x: hidden;
+  /* Eliminate 300ms tap delay on all interactive elements */
+  touch-action: manipulation;
   /* Improve text rendering on mobile */
   text-rendering: optimizeSpeed;
   -webkit-tap-highlight-color: rgba(245, 166, 35, 0.2);

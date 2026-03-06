@@ -41,7 +41,7 @@ export default function SeasonalBar() {
         <button
           onClick={handleDismiss}
           aria-label="Dismiss announcement"
-          className="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full hover:bg-[#0f1f2d]/10 transition-colors touch-manipulation"
+          className="flex-shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-[#0f1f2d]/10 active:bg-[#0f1f2d]/20 transition-colors touch-manipulation"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

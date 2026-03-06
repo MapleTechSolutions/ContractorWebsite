@@ -41,11 +41,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+        style={{ paddingTop: 'max(0px, env(safe-area-inset-top))' }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? "bg-[#0f1f2d]/95 backdrop-blur-sm shadow-lg shadow-black/30 py-2 md:py-3"
             : "bg-[#0f1f2d]/80 backdrop-blur-sm py-3 md:py-5"
-        }`}
+          }`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between">
@@ -65,11 +65,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
-                    isActive(link.href)
+                  className={`px-4 py-2 font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${isActive(link.href)
                       ? "text-[#F5A623]"
                       : "text-white/80 hover:text-[#F5A623]"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -106,7 +105,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl transition-all duration-300 z-50 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation text-white hover:bg-white/10"
+              className="lg:hidden p-2 rounded-xl transition-all duration-300 z-50 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation text-white hover:bg-white/10 active:bg-white/20"
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -124,9 +123,8 @@ export default function Header() {
 
       {/* Full Screen Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -135,9 +133,8 @@ export default function Header() {
         />
 
         {/* Menu Content */}
-        <div className={`relative h-full flex flex-col pt-24 pb-8 px-6 transition-transform duration-300 ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}>
+        <div className={`relative h-full flex flex-col pt-24 pb-8 px-6 transition-transform duration-300 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}>
           {/* Navigation Links */}
           <nav className="flex-1 flex flex-col justify-center -mt-12">
             {navLinks.map((link, index) => (
@@ -145,11 +142,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-4 text-2xl font-black uppercase tracking-wider transition-all duration-300 border-b border-white/10 ${
-                  isActive(link.href)
+                className={`py-4 text-2xl font-black uppercase tracking-wider transition-all duration-300 border-b border-white/10 ${isActive(link.href)
                     ? "text-[#F5A623]"
                     : "text-white active:text-[#F5A623]"
-                }`}
+                  }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : '0ms',
                   opacity: isMobileMenuOpen ? 1 : 0,

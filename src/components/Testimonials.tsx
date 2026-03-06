@@ -66,7 +66,7 @@ export default function Testimonials() {
             </svg>
             Reviews
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-4 md:mb-5">
+          <h2 className="text-[clamp(1.5rem,5vw,3rem)] font-black tracking-tight text-white mb-4 md:mb-5">
             What Commercial
             <span className="text-[#F5A623]"> Clients Say</span>
           </h2>
@@ -107,11 +107,10 @@ export default function Testimonials() {
                 {testimonials.map((testimonial, index) => (
                   <p
                     key={testimonial.id}
-                    className={`text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed transition-all duration-500 ${
-                      index === activeIndex
+                    className={`text-[clamp(1rem,2.5vw,1.5rem)] text-white/80 leading-relaxed transition-all duration-500 ${index === activeIndex
                         ? "opacity-100 translate-y-0 relative"
                         : "opacity-0 absolute top-0 left-0 right-0 translate-y-4 pointer-events-none"
-                    }`}
+                      }`}
                   >
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
@@ -157,11 +156,10 @@ export default function Testimonials() {
                   <button
                     key={index}
                     onClick={() => setActiveIndex(index)}
-                    className={`transition-all duration-300 rounded-full touch-manipulation ${
-                      index === activeIndex
+                    className={`transition-all duration-300 rounded-full touch-manipulation ${index === activeIndex
                         ? "w-8 h-3 bg-[#F5A623]"
                         : "w-3 h-3 bg-white/20"
-                    }`}
+                      }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
                 ))}
@@ -183,11 +181,10 @@ export default function Testimonials() {
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                    index === activeIndex
+                  className={`transition-all duration-300 rounded-full ${index === activeIndex
                       ? "w-8 h-3 bg-[#F5A623]"
                       : "w-3 h-3 bg-white/20 hover:bg-white/40"
-                  }`}
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
