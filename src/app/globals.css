@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Big Country Landscaping & Maintenance Ltd — Steel Blue & Amber */
+  --primary-dark: #0f1f2d;
+  --primary-mid: #2d4f64;
+  --accent-primary: #F5A623;
+  --accent-highlight: #F5A623;
+  --text-light: #ffffff;
+  --text-muted: #a0a0a0;
+  --bg-light: #f8f9fa;
+  /* Safe area for notched devices */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Smooth scrolling with reduced motion support */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  background: #0f1f2d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+  /* Eliminate 300ms tap delay on all interactive elements */
+  touch-action: manipulation;
+  /* Improve text rendering on mobile */
+  text-rendering: optimizeSpeed;
+  -webkit-tap-highlight-color: rgba(245, 166, 35, 0.2);
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1f2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F5A623;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4921f;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+
+@layer components {
+  /* Mobile-first button styles with proper touch targets (min 44px) */
+  .btn-primary {
+    @apply bg-[#F5A623] hover:bg-[#d4921f] active:bg-[#d4921f] text-[#0f1f2d] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg shadow-[#F5A623]/25 hover:shadow-xl hover:shadow-[#F5A623]/30 min-h-[48px] touch-manipulation;
+  }
+
+  .btn-secondary {
+    @apply bg-[#0f1f2d] hover:bg-[#2d4f64] active:bg-[#0f1f2d] text-white font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#F5A623] text-[#F5A623] hover:bg-[#F5A623] hover:text-[#0f1f2d] active:bg-[#d4921f] font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
+  }
+
+  .btn-outline-white {
+    @apply border-2 border-white text-white hover:bg-white hover:text-[#0f1f2d] active:bg-gray-100 font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition-all duration-200 inline-flex items-center justify-center uppercase tracking-wider text-sm min-h-[48px] touch-manipulation;
+  }
+
+  /* Responsive section padding - reduced on mobile for more content visibility */
+  .section-padding {
+    @apply py-12 px-4 sm:py-16 sm:px-5 md:py-20 md:px-6 lg:py-28 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-0;
+  }
+
+  .section-dark {
+    @apply bg-[#0f1f2d] text-white;
+  }
+
+  .section-light {
+    @apply bg-[#f8f9fa];
+  }
+
+  .accent-text {
+    @apply text-[#F5A623];
+  }
+
+  /* Reduced hover effects on mobile for better performance */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  @media (hover: hover) {
+    .card-hover:hover {
+      @apply -translate-y-2 shadow-2xl;
+    }
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#F5A623] to-[#0f1f2d] bg-clip-text text-transparent;
+  }
+
+  /* Mobile-friendly form inputs */
+  .form-input {
+    @apply w-full px-4 py-3.5 bg-[#f8f9fa] border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#F5A623]/20 focus:border-[#F5A623] outline-none transition-colors text-base min-h-[48px];
+  }
+
+  /* Touch-friendly link areas */
+  .touch-link {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Selection color */
+::selection {
+  background: #F5A623;
+  color: #0f1f2d;
+}
+
+/* Stat counter animation placeholder */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Modern card glass effect - optimized for mobile */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .glass-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  @apply fixed inset-0 bg-black/50 z-40;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* Smooth mobile scrolling for horizontal scroll containers */
+.scroll-smooth-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-smooth-x::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-smooth-x > * {
+  scroll-snap-align: start;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #F5A623;
+  outline-offset: 2px;
+}
+
+/* Safe area padding for notched devices */
+.safe-area-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-area-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
+/* Sticky CTA for mobile */
+.sticky-cta-mobile {
+  @apply fixed bottom-0 left-0 right-0 z-40 bg-[#0f1f2d] border-t border-white/10 p-3 shadow-lg;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Hide on desktop, show on mobile */
+@media (min-width: 768px) {
+  .sticky-cta-mobile {
+    display: none;
+  }
+}
+
+/* Reduce animations on mobile for performance */
+@media (max-width: 768px) {
+  .reduce-motion-mobile {
+    animation: none !important;
+    transition-duration: 0.15s !important;
+  }
+}
