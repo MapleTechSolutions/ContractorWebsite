@@ -1,0 +1,17 @@
+# AI tool internals
+.agent/
+.agents/
+.claude/
+.gemini/
+
+# Dev utility scripts
+extract_colors.ps1
+extract_colors2.ps1
+extract_colors3.ps1
+make_preview.py
+pdf_preview.html
+pdf_pages/
+.planning/pdf_previews/
+
+# Nested git repos (managed separately)
+abc-roofing/

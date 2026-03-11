@@ -78,7 +78,7 @@ Recent decisions affecting current work:
 - ServicePillars converted to client component — landscaping pillar uses 7-photo crossfade slideshow (2s auto-advance, amber pill dot indicator, per-slide category label) (D-503)
 - globals.css: @keyframes marquee + .animate-marquee class added for amber scrolling strip (D-504)
 - LandscapeConstruction page.tsx simplified to just render the component — hero now owned by component (D-505)
-- Next: add real photos to Excavation pillar (excavation job-site shots) and Snow Removal pillar (night snow clearing shots) — same slideshow pattern
+- ServicePillars.tsx refactored: shared PillarCard component drives all 3 pillars; Excavation gets 4 slides (excavation-1..4.jpg), Snow gets 3 slides (snow1.jpg, snow-2.jpg, snow-3.jpg), Landscape retains 7 slides (yard-work-0..6.jpg); each pillar's slideshow has staggered interval (2.0/2.2/2.4s) so they cycle out of sync (D-517)
 - Testimonials slider logic, data, auto-advance preserved verbatim — Plan 04-06 was color-only (D-409)
 - Testimonials avatar bg kept bg-[#0f1f2d] for depth against bg-white/5 card surface (D-410)
 
@@ -104,8 +104,8 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Add slideshow photos for Excavation pillar in ServicePillars.tsx (when client excavation site shots arrive)
-- Add slideshow photos for Snow & Ice Removal pillar in ServicePillars.tsx (when more snow photos arrive)
+- ~~Add slideshow photos for Excavation pillar in ServicePillars.tsx~~ ✓ Done (D-517)
+- ~~Add slideshow photos for Snow & Ice Removal pillar in ServicePillars.tsx~~ ✓ Done (D-517)
 - Post-v3.1: plan gallery page (/gallery) — filterable grid + lightbox (deferred from v3.0)
 - Post-v3.1: plan Equipment Roster section on homepage (deferred from v3.0)
 
